@@ -1,0 +1,20 @@
+# Vocal Emotion Training Config
+model:
+  base_model: "speechbrain/spkrec-ecapa-voxceleb"
+  num_classes: 5  # Neutral, Enthusiastic, Nervous, Angry, Sad
+  classifier_hidden: 256
+  dropout: 0.3
+
+training:
+  epochs: 30
+  batch_size: 16
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  scheduler: "cosine"
+  early_stopping_patience: 8
+
+data:
+  ravdess_dir: "data/datasets/ravdess"
+  cremad_dir: "data/datasets/cremad"
+  val_split: 0.15
+  test_split: 0.15

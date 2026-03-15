@@ -1,0 +1,31 @@
+# Core ML
+torch>=2.1.0
+torchvision>=0.16.0
+torchaudio>=2.1.0
+
+# HuggingFace
+transformers>=4.36.0
+datasets>=2.16.0
+accelerate>=0.25.0
+evaluate>=0.4.0
+
+# Audio processing
+librosa>=0.10.1
+praat-parselmouth>=0.4.3
+noisereduce>=3.0.0
+soundfile>=0.12.1
+ffmpeg-python>=0.2.0
+
+# Speech models
+speechbrain>=1.0.0
+
+# Scientific
+numpy>=1.24.0
+scipy>=1.11.0
+
+# Utilities
+pyyaml>=6.0
+tqdm>=4.65.0
+
+# Experiment tracking (optional)
+wandb>=0.16.0

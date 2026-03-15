@@ -1,0 +1,55 @@
+# Voice Pipeline Configuration
+pipeline:
+  name: "voice_analysis_v1"
+  version: "1.0.0"
+  device: "mps"  # "mps" for M1, "cuda" for Colab, "cpu" for fallback
+
+audio:
+  sample_rate: 16000
+  channels: 1
+  max_duration_sec: 3600  # 1 hour max
+
+vad:
+  threshold: 0.5
+  min_speech_duration_ms: 250
+  min_silence_duration_ms: 100
+
+whisper:
+  model_id: "openai/whisper-small"
+  language: "en"
+  chunk_length_s: 30
+  batch_size: 1
+
+features:
+  frame_ms: 25
+  hop_ms: 10
+  n_mfcc: 13
+  f0_min: 75
+  f0_max: 600
+
+filler:
+  threshold: 0.5
+  patterns:
+    hesitation: ["um", "uh", "erm", "ah", "mm"]
+    discourse: ["like", "you know", "basically", "i mean",
+                "sort of", "kind of", "right", "okay so", "actually"]
+
+disfluency:
+  model_path: "models/disfluency/best_model.pt"
+  window_sec: 3.0
+  hop_sec: 1.5
+
+prosody:
+  rate_window_sec: 10.0
+  optimal_rate_range: [3.5, 5.0]  # syllables/sec
+  pitch_cv_optimal: [0.15, 0.25]
+
+emotion:
+  model_path: "models/vocal_emotion/best_model.pt"
+  window_sec: 2.0
+  classes: ["Neutral", "Enthusiastic", "Nervous", "Angry", "Sad"]
+
+output:
+  window_sec: 2.0
+  hop_sec: 1.0
+  output_dir: "data/outputs"

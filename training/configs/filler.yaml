@@ -1,0 +1,19 @@
+# Filler Verifier MLP Training Config
+model:
+  input_dim: 768  # Wav2Vec2 embedding size
+  hidden_dims: [256, 128]
+  dropout: 0.3
+  num_classes: 2
+
+training:
+  epochs: 50
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  scheduler: "cosine"
+  early_stopping_patience: 10
+
+data:
+  embeddings_dir: "data/filler_embeddings"
+  val_split: 0.2
+  test_split: 0.1

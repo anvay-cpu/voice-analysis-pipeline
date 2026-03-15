@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Data (large files — download separately)
+data/raw/
+data/audio/
+data/datasets/
+data/filler_embeddings/
+data/outputs/*.json
+
+# Large model files (>100MB — store on Google Drive)
+models/disfluency/best_model.pt
+
+# Local settings
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+
+# Conda/env
+*.conda
+.env
+
+# Jupyter
+.ipynb_checkpoints/

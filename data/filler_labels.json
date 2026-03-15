@@ -1,0 +1,772 @@
+{
+  "metadata": {
+    "total_samples": 76,
+    "fillers": 42,
+    "non_fillers": 34,
+    "auto_labeled_pct": 48.1,
+    "manually_reviewed": 164,
+    "audio_files_processed": 10
+  },
+  "samples": [
+    {
+      "audio_path": "data/raw/Project presentation.wav",
+      "word": "so",
+      "start_sec": 224.32,
+      "end_sec": 224.6,
+      "is_filler": 1,
+      "confidence": 0.65,
+      "rule": "fallback_pause_heuristic",
+      "context": "of their files. [so] these are the"
+    },
+    {
+      "audio_path": "data/raw/Job Interview \uff0a.wav",
+      "word": "so",
+      "start_sec": 12.08,
+      "end_sec": 12.72,
+      "is_filler": 1,
+      "confidence": 0.65,
+      "rule": "fallback_pause_heuristic",
+      "context": "seat. thank you. [so] tell me a"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "uh",
+      "start_sec": 313.08,
+      "end_sec": 313.84,
+      "is_filler": 1,
+      "confidence": 0.99,
+      "rule": "always_filler",
+      "context": "honest day's work, [uh] to do useful"
+    },
+    {
+      "audio_path": "data/raw/Project presentation.wav",
+      "word": "so",
+      "start_sec": 135.32,
+      "end_sec": 135.42,
+      "is_filler": 0,
+      "confidence": 0.92,
+      "rule": "not_filler_phrase:\\bso many\\b",
+      "context": "so many farmers, [so] he will reject"
+    },
+    {
+      "audio_path": "data/raw/How I stopped being an overthinker \uff5c Tally Feingold \uff5c TEDxLFHS.wav",
+      "word": "basically",
+      "start_sec": 72.46,
+      "end_sec": 72.84,
+      "is_filler": 1,
+      "confidence": 0.65,
+      "rule": "fallback_pause_heuristic",
+      "context": "can be defined [basically] that something as"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "you know",
+      "start_sec": 278.1,
+      "end_sec": 279.08,
+      "is_filler": 1,
+      "confidence": 0.95,
+      "rule": "multi_word_filler",
+      "context": "digestible, i think, [you know] know, whatever, 40"
+    },
+    {
+      "audio_path": "data/raw/How I stopped being an overthinker \uff5c Tally Feingold \uff5c TEDxLFHS.wav",
+      "word": "so",
+      "start_sec": 389.98,
+      "end_sec": 389.98,
+      "is_filler": 0,
+      "confidence": 0.92,
+      "rule": "not_filler_phrase:\\bso much\\b",
+      "context": "much. thank you [so] much. thank you"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "you know",
+      "start_sec": 191.18,
+      "end_sec": 191.46,
+      "is_filler": 1,
+      "confidence": 0.95,
+      "rule": "multi_word_filler",
+      "context": "just try to, [you know] know, learn as"
+    },
+    {
+      "audio_path": "data/raw/How I stopped being an overthinker \uff5c Tally Feingold \uff5c TEDxLFHS.wav",
+      "word": "so",
+      "start_sec": 385.5,
+      "end_sec": 385.66,
+      "is_filler": 0,
+      "confidence": 0.92,
+      "rule": "not_filler_phrase:\\bso much\\b",
+      "context": "today. thank you [so] much."
+    },
+    {
+      "audio_path": "data/raw/Job Interview \uff0a.wav",
+      "word": "you know",
+      "start_sec": 28.6,
+      "end_sec": 28.72,
+      "is_filler": 1,
+      "confidence": 0.95,
+      "rule": "multi_word_filler",
+      "context": "that's great. as [you know] know, this job"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "kind of",
+      "start_sec": 263.08,
+      "end_sec": 263.5,
+      "is_filler": 1,
+      "confidence": 0.95,
+      "rule": "multi_word_filler",
+      "context": "that kid i [kind of] of read through"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "you know",
+      "start_sec": 307.76,
+      "end_sec": 308.06,
+      "is_filler": 1,
+      "confidence": 0.95,
+      "rule": "multi_word_filler",
+      "context": "through it. but, [you know] know know, put"
+    },
+    {
+      "audio_path": "data/raw/Project presentation.wav",
+      "word": "so",
+      "start_sec": 207.14,
+      "end_sec": 207.46,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "done by sensors. [so] i conclude that"
+    },
+    {
+      "audio_path": "data/raw/Product Launch Presentation by BCA students.wav",
+      "word": "so",
+      "start_sec": 229.98,
+      "end_sec": 229.98,
+      "is_filler": 0,
+      "confidence": 0.92,
+      "rule": "not_filler_phrase:\\bso much\\b",
+      "context": "thank you guys [so] much for being"
+    },
+    {
+      "audio_path": "data/raw/How I stopped being an overthinker \uff5c Tally Feingold \uff5c TEDxLFHS.wav",
+      "word": "kind of",
+      "start_sec": 200.52,
+      "end_sec": 200.78,
+      "is_filler": 1,
+      "confidence": 0.95,
+      "rule": "multi_word_filler",
+      "context": "well everything just [kind of] of butterfly effects"
+    },
+    {
+      "audio_path": "data/raw/What Ancestral Intelligence Can Teach Us About AI \uff5c Nanjira Sambuli \uff5c TED.wav",
+      "word": "well",
+      "start_sec": 96.34,
+      "end_sec": 96.72,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "on the grass? [well] for one, we"
+    },
+    {
+      "audio_path": "data/raw/Product Launch Presentation by BCA students.wav",
+      "word": "so",
+      "start_sec": 376.66,
+      "end_sec": 376.98,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "is in bangalore. [so] we are making"
+    },
+    {
+      "audio_path": "data/raw/The \u201cHot Shot Rule\u201d To Help You Become a Better Leader \uff5c Kat Cole \uff5c TED.wav",
+      "word": "so",
+      "start_sec": 277.68,
+      "end_sec": 277.84,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "let's practice it. [so] i think first"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "you know",
+      "start_sec": 261.16,
+      "end_sec": 261.46,
+      "is_filler": 1,
+      "confidence": 0.95,
+      "rule": "multi_word_filler",
+      "context": "read, read it. [you know] know, more important"
+    },
+    {
+      "audio_path": "data/raw/The \u201cHot Shot Rule\u201d To Help You Become a Better Leader \uff5c Kat Cole \uff5c TED.wav",
+      "word": "so",
+      "start_sec": 133.6,
+      "end_sec": 133.84,
+      "is_filler": 0,
+      "confidence": 0.92,
+      "rule": "not_filler_phrase:\\bso long\\b",
+      "context": "what took you [so] long? finally, it's"
+    },
+    {
+      "audio_path": "data/raw/Product Launch Presentation by BCA students.wav",
+      "word": "so",
+      "start_sec": 415.24,
+      "end_sec": 415.6,
+      "is_filler": 1,
+      "confidence": 0.65,
+      "rule": "fallback_pause_heuristic",
+      "context": "prices for 999. [so] the price gimmick"
+    },
+    {
+      "audio_path": "data/raw/Project presentation.wav",
+      "word": "so",
+      "start_sec": 198.1,
+      "end_sec": 198.24,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "is data processing. [so] when the data"
+    },
+    {
+      "audio_path": "data/raw/Product Launch Presentation by BCA students.wav",
+      "word": "like",
+      "start_sec": 405.18,
+      "end_sec": 405.44,
+      "is_filler": 1,
+      "confidence": 0.8,
+      "rule": "pause_before_filler",
+      "context": "much. thank you [like] not high price"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "so",
+      "start_sec": 228.84,
+      "end_sec": 229.72,
+      "is_filler": 1,
+      "confidence": 0.65,
+      "rule": "fallback_pause_heuristic",
+      "context": "like doing it. [so] you want to"
+    },
+    {
+      "audio_path": "data/raw/Project presentation.wav",
+      "word": "so",
+      "start_sec": 129.98,
+      "end_sec": 129.98,
+      "is_filler": 0,
+      "confidence": 0.92,
+      "rule": "not_filler_phrase:\\bso much\\b",
+      "context": "watching. thank you [so] much for watching."
+    },
+    {
+      "audio_path": "data/raw/The \u201cHot Shot Rule\u201d To Help You Become a Better Leader \uff5c Kat Cole \uff5c TED.wav",
+      "word": "like",
+      "start_sec": 453.82,
+      "end_sec": 454.04,
+      "is_filler": 1,
+      "confidence": 0.85,
+      "rule": "like_after_verb",
+      "context": "superpower. so be [like] my mom. don't"
+    },
+    {
+      "audio_path": "data/raw/How I stopped being an overthinker \uff5c Tally Feingold \uff5c TEDxLFHS.wav",
+      "word": "kind of",
+      "start_sec": 216.1,
+      "end_sec": 216.38,
+      "is_filler": 1,
+      "confidence": 0.95,
+      "rule": "multi_word_filler",
+      "context": "that was just [kind of] of part of"
+    },
+    {
+      "audio_path": "data/raw/Bonus\uff1a Pick One with Stan Druckenmiller.wav",
+      "word": "so",
+      "start_sec": 92.46,
+      "end_sec": 92.64,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "not that smart, [so] i just go"
+    },
+    {
+      "audio_path": "data/raw/Product Launch Presentation by BCA students.wav",
+      "word": "okay",
+      "start_sec": 671.76,
+      "end_sec": 672.1,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "friendly, user friendly, [okay] we can say,"
+    },
+    {
+      "audio_path": "data/raw/Product Launch Presentation by BCA students.wav",
+      "word": "so",
+      "start_sec": 558.2,
+      "end_sec": 559.1,
+      "is_filler": 1,
+      "confidence": 0.65,
+      "rule": "fallback_pause_heuristic",
+      "context": "i can use? [so] enter into the"
+    },
+    {
+      "audio_path": "data/raw/Product Launch Presentation by BCA students.wav",
+      "word": "okay so",
+      "start_sec": 614.68,
+      "end_sec": 615.42,
+      "is_filler": 1,
+      "confidence": 0.95,
+      "rule": "multi_word_filler",
+      "context": "a fingerprint scanner. [okay so] so suddenly i'm"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "you know",
+      "start_sec": 43.68,
+      "end_sec": 43.82,
+      "is_filler": 1,
+      "confidence": 0.95,
+      "rule": "multi_word_filler",
+      "context": "very hard. um, [you know] know, are you"
+    },
+    {
+      "audio_path": "data/raw/Be Thou Clean \uff5c D. Martin Goury \uff5c October 2024 General Conference.wav",
+      "word": "so",
+      "start_sec": 265.38,
+      "end_sec": 266.18,
+      "is_filler": 1,
+      "confidence": 0.65,
+      "rule": "fallback_pause_heuristic",
+      "context": "of these devices, [so] each morning, i"
+    },
+    {
+      "audio_path": "data/raw/How I stopped being an overthinker \uff5c Tally Feingold \uff5c TEDxLFHS.wav",
+      "word": "so",
+      "start_sec": 193.74,
+      "end_sec": 194.1,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "connected and intertwined [so] therefore any tiny"
+    },
+    {
+      "audio_path": "data/raw/How I stopped being an overthinker \uff5c Tally Feingold \uff5c TEDxLFHS.wav",
+      "word": "so",
+      "start_sec": 356.28,
+      "end_sec": 356.48,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "listen to this [so] -called little voice."
+    },
+    {
+      "audio_path": "data/raw/Job Interview \uff0a.wav",
+      "word": "well",
+      "start_sec": 22.26,
+      "end_sec": 22.48,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "states. i work [well] with others, and"
+    },
+    {
+      "audio_path": "data/raw/How I stopped being an overthinker \uff5c Tally Feingold \uff5c TEDxLFHS.wav",
+      "word": "kind of",
+      "start_sec": 218.58,
+      "end_sec": 218.84,
+      "is_filler": 1,
+      "confidence": 0.95,
+      "rule": "multi_word_filler",
+      "context": "or i could [kind of] of melt into"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "uh",
+      "start_sec": 321.9,
+      "end_sec": 322.2,
+      "is_filler": 1,
+      "confidence": 0.99,
+      "rule": "always_filler",
+      "context": "um, or, or, [uh] like have, have"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "um",
+      "start_sec": 42.44,
+      "end_sec": 43.68,
+      "is_filler": 1,
+      "confidence": 0.99,
+      "rule": "always_filler",
+      "context": "useful. very hard. [um] you know, are"
+    },
+    {
+      "audio_path": "data/raw/Bonus\uff1a Pick One with Stan Druckenmiller.wav",
+      "word": "kind of",
+      "start_sec": 74.34,
+      "end_sec": 74.58,
+      "is_filler": 1,
+      "confidence": 0.95,
+      "rule": "multi_word_filler",
+      "context": "and you just [kind of] of know it,"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "like",
+      "start_sec": 249.58,
+      "end_sec": 249.82,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "at it. you [like] doing it and"
+    },
+    {
+      "audio_path": "data/raw/Bonus\uff1a Pick One with Stan Druckenmiller.wav",
+      "word": "so",
+      "start_sec": 73.38,
+      "end_sec": 73.6,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "the opportunity is [so] big and you"
+    },
+    {
+      "audio_path": "data/raw/The \u201cHot Shot Rule\u201d To Help You Become a Better Leader \uff5c Kat Cole \uff5c TED.wav",
+      "word": "so",
+      "start_sec": 275.84,
+      "end_sec": 276.04,
+      "is_filler": 0,
+      "confidence": 0.92,
+      "rule": "not_filler_phrase:\\band so\\b",
+      "context": "we are. and [so] let's practice it."
+    },
+    {
+      "audio_path": "data/raw/Product Launch Presentation by BCA students.wav",
+      "word": "so",
+      "start_sec": 10.4,
+      "end_sec": 10.86,
+      "is_filler": 1,
+      "confidence": 0.65,
+      "rule": "fallback_pause_heuristic",
+      "context": "khan and hisha. [so] before introducing the"
+    },
+    {
+      "audio_path": "data/raw/Product Launch Presentation by BCA students.wav",
+      "word": "so",
+      "start_sec": 158.68,
+      "end_sec": 159.98,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "name or password. [so] it's for users"
+    },
+    {
+      "audio_path": "data/raw/Job Interview \uff0a.wav",
+      "word": "you know",
+      "start_sec": 106.94,
+      "end_sec": 107.1,
+      "is_filler": 1,
+      "confidence": 0.95,
+      "rule": "multi_word_filler",
+      "context": "week and let [you know] know. do you"
+    },
+    {
+      "audio_path": "data/raw/Project presentation.wav",
+      "word": "so",
+      "start_sec": 134.2,
+      "end_sec": 134.46,
+      "is_filler": 0,
+      "confidence": 0.92,
+      "rule": "not_filler_phrase:\\bso many\\b",
+      "context": "are grown by [so] many farmers, so"
+    },
+    {
+      "audio_path": "data/raw/What Ancestral Intelligence Can Teach Us About AI \uff5c Nanjira Sambuli \uff5c TED.wav",
+      "word": "like",
+      "start_sec": 161.88,
+      "end_sec": 162.36,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "this in sayings [like] data is the"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "like",
+      "start_sec": 407.28,
+      "end_sec": 410.94,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "the economic pie. [like] i said, creating"
+    },
+    {
+      "audio_path": "data/raw/Trusting Our Father \uff5c David P. Homer \uff5c October 2024 General Conference.wav",
+      "word": "right",
+      "start_sec": 122.3,
+      "end_sec": 122.56,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "between what is [right] and what is"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "like",
+      "start_sec": 159.1,
+      "end_sec": 159.28,
+      "is_filler": 0,
+      "confidence": 0.92,
+      "rule": "not_filler_phrase:\\blike a\\b",
+      "context": "at least have [like] a rough lay"
+    },
+    {
+      "audio_path": "data/raw/The \u201cHot Shot Rule\u201d To Help You Become a Better Leader \uff5c Kat Cole \uff5c TED.wav",
+      "word": "so",
+      "start_sec": 99.86,
+      "end_sec": 100.2,
+      "is_filler": 1,
+      "confidence": 0.65,
+      "rule": "fallback_pause_heuristic",
+      "context": "our own progress. [so] one of the"
+    },
+    {
+      "audio_path": "data/raw/What Ancestral Intelligence Can Teach Us About AI \uff5c Nanjira Sambuli \uff5c TED.wav",
+      "word": "like",
+      "start_sec": 135.26,
+      "end_sec": 135.56,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "be developing technologies [like] ai for the"
+    },
+    {
+      "audio_path": "data/raw/Product Launch Presentation by BCA students.wav",
+      "word": "okay",
+      "start_sec": 661.78,
+      "end_sec": 662.58,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "me sir. okay. [okay] good. that's it."
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "i mean",
+      "start_sec": 427.4,
+      "end_sec": 427.52,
+      "is_filler": 1,
+      "confidence": 0.95,
+      "rule": "multi_word_filler",
+      "context": "zero -sum mindset. [i mean] mean, it's all"
+    },
+    {
+      "audio_path": "data/raw/Project presentation.wav",
+      "word": "so",
+      "start_sec": 162.98,
+      "end_sec": 163.08,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "were not recommended. [so] we are including"
+    },
+    {
+      "audio_path": "data/raw/Product Launch Presentation by BCA students.wav",
+      "word": "so",
+      "start_sec": 106.64,
+      "end_sec": 106.84,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "gpr is tracking [so] you can easily"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "uh",
+      "start_sec": 265.92,
+      "end_sec": 266.26,
+      "is_filler": 1,
+      "confidence": 0.99,
+      "rule": "always_filler",
+      "context": "through the encyclopedia. [uh] so that was"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "uh",
+      "start_sec": 318.4,
+      "end_sec": 318.66,
+      "is_filler": 1,
+      "confidence": 0.99,
+      "rule": "always_filler",
+      "context": "to have like, [uh] not a zero"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "you know",
+      "start_sec": 170.18,
+      "end_sec": 170.24,
+      "is_filler": 1,
+      "confidence": 0.95,
+      "rule": "multi_word_filler",
+      "context": "in, how would [you know] know what you're"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "uh",
+      "start_sec": 185.44,
+      "end_sec": 186.7,
+      "is_filler": 1,
+      "confidence": 0.99,
+      "rule": "always_filler",
+      "context": "life and different, [uh] industries and professions"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "kind of",
+      "start_sec": 333.8,
+      "end_sec": 335.5,
+      "is_filler": 1,
+      "confidence": 0.95,
+      "rule": "multi_word_filler",
+      "context": "very smart people [kind of] of taking an"
+    },
+    {
+      "audio_path": "data/raw/Job Interview \uff0a.wav",
+      "word": "well",
+      "start_sec": 43.24,
+      "end_sec": 43.4,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "also, i work [well] under pressure. wonderful."
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "sort of",
+      "start_sec": 343.44,
+      "end_sec": 343.8,
+      "is_filler": 1,
+      "confidence": 0.95,
+      "rule": "multi_word_filler",
+      "context": "at a base [sort of] of axiomatic level,"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "you know",
+      "start_sec": 283.56,
+      "end_sec": 285.3,
+      "is_filler": 1,
+      "confidence": 0.95,
+      "rule": "multi_word_filler",
+      "context": "years ago. so, [you know] know, maybe read"
+    },
+    {
+      "audio_path": "data/raw/Product Launch Presentation by BCA students.wav",
+      "word": "so",
+      "start_sec": 338.38,
+      "end_sec": 338.46,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "the laptop bags, [so] we can implement"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "so",
+      "start_sec": 389.12,
+      "end_sec": 389.86,
+      "is_filler": 1,
+      "confidence": 0.65,
+      "rule": "fallback_pause_heuristic",
+      "context": "is not fixed. [so] e - e"
+    },
+    {
+      "audio_path": "data/raw/Trusting Our Father \uff5c David P. Homer \uff5c October 2024 General Conference.wav",
+      "word": "so",
+      "start_sec": 331.8,
+      "end_sec": 332.1,
+      "is_filler": 1,
+      "confidence": 0.65,
+      "rule": "fallback_pause_heuristic",
+      "context": "what he said. [so] trusting their own"
+    },
+    {
+      "audio_path": "data/raw/Job Interview \uff0a.wav",
+      "word": "like",
+      "start_sec": 23.5,
+      "end_sec": 23.64,
+      "is_filler": 0,
+      "confidence": 0.92,
+      "rule": "not_filler_phrase:\\bi like\\b",
+      "context": "others, and i [like] to challenge myself"
+    },
+    {
+      "audio_path": "data/raw/Product Launch Presentation by BCA students.wav",
+      "word": "so",
+      "start_sec": 172.6,
+      "end_sec": 172.74,
+      "is_filler": 1,
+      "confidence": 0.65,
+      "rule": "fallback_pause_heuristic",
+      "context": "unlock his app. [so] these are the"
+    },
+    {
+      "audio_path": "data/raw/How I stopped being an overthinker \uff5c Tally Feingold \uff5c TEDxLFHS.wav",
+      "word": "okay",
+      "start_sec": 92.5,
+      "end_sec": 92.76,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "eyes and that's [okay] because the first"
+    },
+    {
+      "audio_path": "data/raw/Job Interview \uff0a.wav",
+      "word": "well",
+      "start_sec": 15.1,
+      "end_sec": 15.4,
+      "is_filler": 0,
+      "confidence": 0.6,
+      "rule": "fallback_default_not_filler",
+      "context": "yourself, mr. wang. [well] i grew up"
+    },
+    {
+      "audio_path": "data/raw/Elon Musk\uff1a Advice for Young People \uff5c Lex Fridman Podcast Clips.wav",
+      "word": "um",
+      "start_sec": 320.02,
+      "end_sec": 321.34,
+      "is_filler": 1,
+      "confidence": 0.99,
+      "rule": "always_filler",
+      "context": "zero sum mindset, [um] or, or, uh,"
+    },
+    {
+      "audio_path": "data/raw/Product Launch Presentation by BCA students.wav",
+      "word": "so",
+      "start_sec": 644.28,
+      "end_sec": 645.48,
+      "is_filler": 1,
+      "confidence": 0.8,
+      "rule": "pause_before_filler",
+      "context": "your mother's impression [so] when i am"
+    },
+    {
+      "audio_path": "data/raw/Product Launch Presentation by BCA students.wav",
+      "word": "so",
+      "start_sec": 503.92,
+      "end_sec": 505.68,
+      "is_filler": 1,
+      "confidence": 0.65,
+      "rule": "fallback_pause_heuristic",
+      "context": "are semi -sandwren. [so] when there is"
+    },
+    {
+      "audio_path": "data/raw/Product Launch Presentation by BCA students.wav",
+      "word": "so",
+      "start_sec": 290.84,
+      "end_sec": 292.44,
+      "is_filler": 1,
+      "confidence": 0.65,
+      "rule": "fallback_pause_heuristic",
+      "context": "to the others. [so] the advantageous is"
+    }
+  ]
+}

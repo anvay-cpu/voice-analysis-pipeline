@@ -1,0 +1,19 @@
+# Disfluency Detection Training Config
+model:
+  base_model: "facebook/wav2vec2-base"
+  num_labels: 5  # NoStutteredWords, Prolongation, Block, SoundRepetition, WordRepetition
+  freeze_feature_extractor: true
+  classifier_dropout: 0.3
+
+training:
+  epochs: 20
+  batch_size: 8
+  learning_rate: 0.00002
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  fp16: false  # Not supported on MPS, use on Colab
+
+data:
+  dataset_dir: "data/datasets/sep28k"
+  max_audio_length_sec: 3.0
+  val_split: 0.15
