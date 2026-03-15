@@ -1,0 +1,69 @@
+body_pipeline:
+  name: "body_analysis_v1"
+  version: "1.0.0"
+  device: "mps"
+
+video:
+  frame_rate: 5              # Extract at 5 fps
+  resolution: [1280, 720]    # Resize to 720p
+  max_duration_sec: 3600
+
+person_detection:
+  model: "yolov8n"           # YOLOv8-nano
+  confidence_threshold: 0.5
+  select_strategy: "largest_bbox"  # Assume largest person is speaker
+
+pose:
+  model: "mediapipe"
+  num_keypoints: 33
+  min_detection_confidence: 0.5
+  min_tracking_confidence: 0.5
+
+posture:
+  model_path: "models/posture_mlp/best_model.pt"
+  shoulder_angle_threshold_deg: 5.0
+  spine_deviation_threshold_deg: 10.0
+  weight_ratio_range: [0.85, 1.15]
+  rule_weight: 0.3           # lambda in hybrid scoring
+
+gesture:
+  model_path: "models/gesture_transformer/best_model.pt"
+  window_frames: 15          # 3 seconds at 5fps
+  hop_frames: 8              # ~1.6 second hop
+  classes: ["Illustrator", "Emblem", "Beat", "Adaptor", "Rest"]
+
+hand:
+  model: "mediapipe"
+  min_detection_confidence: 0.5
+  states: ["Open palm", "Pointing", "Crossed arms",
+           "Hands in pockets", "Steepling", "Behind back", "Other"]
+
+gaze:
+  model: "mediapipe_face_mesh"
+  zones:
+    audience_center: {yaw_range: [-20, 20], pitch_range: [-15, 15]}
+    audience_left: {yaw_range: [-60, -20], pitch_range: [-15, 15]}
+    audience_right: {yaw_range: [20, 60], pitch_range: [-15, 15]}
+    notes_podium: {pitch_range: [25, 60]}
+    floor: {pitch_range: [40, 90]}
+
+facial_emotion:
+  model_path: "models/facial_emotion/best_model.pt"
+  classes: ["Neutral", "Happy", "Sad", "Surprise", "Fear",
+            "Disgust", "Anger", "Contempt"]
+  face_crop_margin: 0.2
+
+stage_movement:
+  frozen_threshold_px_per_sec: 2.0
+  pacing_autocorrelation_threshold: 0.6
+  classifications: ["Roaming", "Anchored", "Pacing", "Purposeful"]
+
+temporal:
+  window_frames: 30          # 6 seconds at 5fps
+  hop_frames: 15             # 3-second hop (50% overlap)
+  smoothing_kernel: 5
+
+output:
+  window_sec: 6.0
+  hop_sec: 3.0
+  output_dir: "data/outputs"

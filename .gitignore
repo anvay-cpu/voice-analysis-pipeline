@@ -17,6 +17,20 @@ data/outputs/*.json
 # Large model files (>100MB — store on Google Drive)
 models/disfluency/best_model.pt
 
+# Pretrained model binaries (download at runtime)
+models/pose_landmarker_lite.task
+models/posture_mlp/best_model.pt
+models/gesture_transformer/best_model.pt
+models/facial_emotion/best_model.pt
+yolov8n.pt
+
+# Pipeline output frames (regenerated from video)
+data/frames/
+data/poses/
+
+# Voice pipeline outputs
+voice_pipeline_outputs/
+
 # Local settings
 .claude/
 

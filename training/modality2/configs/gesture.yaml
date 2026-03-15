@@ -1,0 +1,25 @@
+gesture_training:
+  model: "Transformer"
+  num_keypoints: 33
+  keypoint_dim: 3      # x, y, visibility
+  input_dim: 99        # 33 * 3
+  d_model: 128
+  nhead: 4
+  num_layers: 4
+  dim_feedforward: 256
+  dropout: 0.1
+  num_classes: 5       # Illustrator, Emblem, Beat, Adaptor, Rest
+
+  window_frames: 15    # 3 seconds at 5fps
+  hop_frames: 8
+
+  learning_rate: 0.0003
+  weight_decay: 0.01
+  batch_size: 64
+  epochs: 80
+  patience: 12
+  warmup_epochs: 5
+
+  device: "mps"
+  save_dir: "models/gesture_transformer"
+  target_f1: 0.65

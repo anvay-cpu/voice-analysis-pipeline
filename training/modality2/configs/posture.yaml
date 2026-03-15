@@ -1,0 +1,16 @@
+posture_training:
+  model: "MLP"
+  input_dim: 12        # shoulder angles, spine, weight ratios, etc.
+  hidden_dims: [64, 32]
+  output_dim: 1        # quality score [0, 1]
+  dropout: 0.2
+
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  batch_size: 32
+  epochs: 100
+  patience: 15
+
+  device: "mps"
+  save_dir: "models/posture_mlp"
+  target_mae: 0.6
