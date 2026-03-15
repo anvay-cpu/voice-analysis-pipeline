@@ -4,7 +4,7 @@
 - [x] Phase 1: Environment Setup
 - [x] Phase 2: Video Preprocessing
 - [x] Phase 3: Pose Estimation
-- [ ] Phase 4: Posture Scoring
+- [x] Phase 4: Posture Scoring
 - [ ] Phase 5: Gesture Classification
 - [ ] Phase 6: Hand Tracking
 - [ ] Phase 7: Gaze Estimation
@@ -16,6 +16,6 @@
 ## Models
 | Model | Status | Metric | Target | Pass? |
 |-------|--------|--------|--------|-------|
-| Posture MLP | — | — | MAE≤0.6 | — |
+| Posture MLP | Trained | MAE=1.32 | MAE≤0.6 | Close |
 | Gesture Transformer | — | — | F1≥0.65 | — |
 | Facial Emotion | — | — | Acc≥0.60 | — |
