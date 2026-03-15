@@ -1,7 +1,7 @@
 # Voice Pipeline Build Progress
 Last updated: 2026-03-15
 
-## Status
+## Status — MODALITY 1 COMPLETE
 - [x] Phase 1: Environment Setup — COMPLETE
 - [x] Phase 2: Audio Preprocessing — COMPLETE
 - [x] Phase 3: Speech-to-Text (Whisper) — COMPLETE
@@ -11,7 +11,7 @@ Last updated: 2026-03-15
 - [x] Phase 7: Prosody Analysis — COMPLETE (23/23 tests pass, no training needed)
 - [x] Phase 8: Vocal Emotion — COMPLETE (Test UAR=0.54, accepted as partial pass)
 - [x] Phase 9: Integration & Assembly — COMPLETE
-- [ ] Phase 10: Testing & Validation
+- [x] Phase 10: Testing & Validation — COMPLETE (3 videos, 58 tests pass, validation report written)
 
 ## Models
 | Model | Status | Metric | Target | Pass? |
@@ -20,5 +20,10 @@ Last updated: 2026-03-15
 | Disfluency | Trained | MacroF1=0.50 | MacroF1≥0.45 | Yes (beats Apple 2021 baseline of 0.43) |
 | Vocal Emotion | Trained | UAR=0.54 | UAR≥0.58 | Partial (accepted, improvable with Wav2Vec2 encoder) |
 
-## User Actions Pending
-- Download vocal emotion model from Google Drive to `models/vocal_emotion/best_model.pt`
+## Phase 10 Validation Summary
+- 3 test videos processed on Google Colab (T4 GPU): good speaker, nervous speaker, monotone speaker
+- 58 tests passed (15 integration + 43 output validation)
+- Disfluency detection strongest signal: nervous speaker 71 vs good speaker 15
+- Emotion model weakest component: low variety, misclassifies vocal energy as "Angry"
+- Full report: docs/validation_report.md
+- **Pipeline is end-to-end functional and ready for Modality 2**
