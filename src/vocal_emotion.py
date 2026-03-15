@@ -39,18 +39,16 @@ def _patch_speechbrain_compat():
         if spec:
             sb_path = spec.submodule_search_locations[0]
 
-            # Patch torch_audio_backend.py
+            # Patch torch_audio_backend.py — replace the problematic function entirely
             backend_file = f'{sb_path}/utils/torch_audio_backend.py'
             try:
                 with open(backend_file, 'r') as f:
                     content = f.read()
-                old = '        available_backends = torchaudio.list_audio_backends()'
-                new = ('        if hasattr(torchaudio, "list_audio_backends"):\n'
-                       '            available_backends = torchaudio.list_audio_backends()\n'
-                       '        else:\n'
-                       '            available_backends = ["default"]')
-                if old in content:
-                    content = content.replace(old, new)
+                if 'torchaudio.list_audio_backends()' in content and 'hasattr' not in content:
+                    content = content.replace(
+                        'torchaudio.list_audio_backends()',
+                        '(torchaudio.list_audio_backends() if hasattr(torchaudio, "list_audio_backends") else ["default"])'
+                    )
                     with open(backend_file, 'w') as f:
                         f.write(content)
             except Exception:
