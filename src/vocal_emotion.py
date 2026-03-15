@@ -5,10 +5,90 @@ import torch.nn as nn
 import numpy as np
 from dataclasses import dataclass
 
-# Patch torchaudio for SpeechBrain compatibility (torchaudio>=2.1 removed list_audio_backends)
-import torchaudio
-if not hasattr(torchaudio, "list_audio_backends"):
-    torchaudio.list_audio_backends = lambda: ["default"]
+
+def _patch_speechbrain_compat():
+    """Patch torchaudio and huggingface_hub for SpeechBrain compatibility.
+
+    Must be called before importing speechbrain.
+    - torchaudio >= 2.10 removed list_audio_backends()
+    - huggingface_hub >= 1.0 removed use_auth_token parameter
+    """
+    import torchaudio
+    if not hasattr(torchaudio, "list_audio_backends"):
+        torchaudio.list_audio_backends = lambda: ["default"]
+
+    # Patch huggingface_hub to ignore use_auth_token
+    try:
+        import huggingface_hub
+        import functools
+        _orig = huggingface_hub.hf_hub_download
+        if not getattr(_orig, '_patched', False):
+            @functools.wraps(_orig)
+            def _patched(*args, **kwargs):
+                kwargs.pop('use_auth_token', None)
+                return _orig(*args, **kwargs)
+            _patched._patched = True
+            huggingface_hub.hf_hub_download = _patched
+    except Exception:
+        pass
+
+    # Patch speechbrain fetching if already partially loaded
+    try:
+        import importlib
+        spec = importlib.util.find_spec("speechbrain")
+        if spec:
+            sb_path = spec.submodule_search_locations[0]
+
+            # Patch torch_audio_backend.py
+            backend_file = f'{sb_path}/utils/torch_audio_backend.py'
+            try:
+                with open(backend_file, 'r') as f:
+                    content = f.read()
+                old = '        available_backends = torchaudio.list_audio_backends()'
+                new = ('        if hasattr(torchaudio, "list_audio_backends"):\n'
+                       '            available_backends = torchaudio.list_audio_backends()\n'
+                       '        else:\n'
+                       '            available_backends = ["default"]')
+                if old in content:
+                    content = content.replace(old, new)
+                    with open(backend_file, 'w') as f:
+                        f.write(content)
+            except Exception:
+                pass
+
+            # Patch fetching.py
+            fetch_file = f'{sb_path}/utils/fetching.py'
+            try:
+                with open(fetch_file, 'r') as f:
+                    content = f.read()
+                old = '"use_auth_token": use_auth_token,'
+                new = '# "use_auth_token": use_auth_token,  # patched'
+                if old in content:
+                    content = content.replace(old, new)
+                    with open(fetch_file, 'w') as f:
+                        f.write(content)
+            except Exception:
+                pass
+
+            # Patch interfaces.py for custom.py 404
+            iface_file = f'{sb_path}/inference/interfaces.py'
+            try:
+                with open(iface_file, 'r') as f:
+                    content = f.read()
+                old = '        except ValueError:'
+                new = '        except (ValueError, Exception):'
+                if old in content and new not in content:
+                    content = content.replace(old, new, 1)
+                    with open(iface_file, 'w') as f:
+                        f.write(content)
+            except Exception:
+                pass
+    except Exception:
+        pass
+
+
+# Apply patches before any speechbrain import
+_patch_speechbrain_compat()
 
 
 EMOTION_CLASSES = ["Neutral", "Enthusiastic", "Nervous", "Angry", "Sad"]
