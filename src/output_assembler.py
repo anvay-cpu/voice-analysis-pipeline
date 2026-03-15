@@ -143,8 +143,8 @@ def _find_overlapping_emotion(emotion_results, win_start, win_end):
     best_overlap = 0.0
     for e in emotion_results:
         # Support both EmotionResult objects and dicts
-        e_start = getattr(e, "start_sec", None) or e.get("start_sec", 0)
-        e_end = getattr(e, "end_sec", None) or e.get("end_sec", 0)
+        e_start = getattr(e, "start_sec", None) if hasattr(e, "start_sec") else e.get("start_sec", 0)
+        e_end = getattr(e, "end_sec", None) if hasattr(e, "end_sec") else e.get("end_sec", 0)
         overlap_start = max(e_start, win_start)
         overlap_end = min(e_end, win_end)
         overlap = max(0, overlap_end - overlap_start)
@@ -155,9 +155,9 @@ def _find_overlapping_emotion(emotion_results, win_start, win_end):
     if best is None:
         return {"available": False}
 
-    label = getattr(best, "label", None) or best.get("label", "Unknown")
-    confidence = getattr(best, "confidence", None) or best.get("confidence", 0.0)
-    distribution = getattr(best, "distribution", None) or best.get("distribution", {})
+    label = getattr(best, "label", None) if hasattr(best, "label") else best.get("label", "Unknown")
+    confidence = getattr(best, "confidence", None) if hasattr(best, "confidence") else best.get("confidence", 0.0)
+    distribution = getattr(best, "distribution", None) if hasattr(best, "distribution") else best.get("distribution", {})
 
     return {
         "available": True,
