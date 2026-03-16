@@ -27,3 +27,25 @@ Last updated: 2026-03-15
 - Emotion model weakest component: low variety, misclassifies vocal energy as "Angry"
 - Full report: docs/validation_report.md
 - **Pipeline is end-to-end functional and ready for Modality 2**
+
+## Modality 2 — Body Language Pipeline
+Last updated: 2026-03-16
+
+- [x] Phase 1: Environment Setup — COMPLETE
+- [x] Phase 2: Video Preprocessing — COMPLETE (frame extraction + YOLOv8 person detection)
+- [x] Phase 3: Pose Estimation — COMPLETE (MediaPipe 33-point skeleton)
+- [x] Phase 4: Posture Scoring — COMPLETE (rule-based + MLP hybrid, MAE=1.32)
+- [ ] Phase 5: Gesture Classification — IN PROGRESS (code + notebook ready, needs Colab training)
+- [ ] Phase 6: Hand Tracking
+- [ ] Phase 7: Gaze Estimation
+- [ ] Phase 8: Facial Emotion
+- [ ] Phase 9: Stage Movement
+- [ ] Phase 10: Temporal Assembly
+- [ ] Phase 11: Testing & Validation
+
+### Phase 5 Status
+- `src/body/gesture_classifier.py` — GestureTransformer model + heuristic fallback (DONE)
+- `training/modality2/colab_gesture_transformer.ipynb` — Colab training notebook (DONE)
+- `tests/modality2/test_gesture.py` — 13/13 tests passing (DONE)
+- 11 training MP4 videos downloaded to `data/raw/` (DONE)
+- **Next:** Run notebook on Colab → train model → download `best_model.pt`
