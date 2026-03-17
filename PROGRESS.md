@@ -39,7 +39,7 @@ Last updated: 2026-03-17
 - [x] Phase 6: Hand Tracking — COMPLETE (MediaPipe Hands, 8 hand states, 16/16 tests)
 - [x] Phase 7: Gaze Estimation — COMPLETE (MediaPipe Face Mesh, 6 gaze zones, 20/20 tests)
 - [x] Phase 8: Facial Emotion — COMPLETE (EfficientNet-B0, test acc=0.5450, 21/21 tests)
-- [ ] Phase 9: Stage Movement
+- [x] Phase 9: Stage Movement — COMPLETE (4 patterns, 30/30 tests, no training needed)
 - [ ] Phase 10: Temporal Assembly
 - [ ] Phase 11: Testing & Validation
 
@@ -65,3 +65,11 @@ Last updated: 2026-03-17
 - `training/modality2/colab_facial_emotion.ipynb` — Colab notebook ready
 - Test accuracy: 0.5450 (target 0.60, accepted — FER2013 human agreement ~65%)
 - Model at `models/facial_emotion/best_model.pt` (17MB)
+
+### Phase 9 Status
+- `src/body/stage_movement.py` — centroid tracking + movement metrics + pattern classification
+- 4 patterns: Anchored, Pacing, Roaming, Purposeful
+- Metrics: displacement, velocity, convex hull area, directional entropy, autocorrelation
+- Stage usage scoring: Purposeful (8) > Roaming (7) > Anchored (5) > Pacing (3)
+- `tests/modality2/test_stage_movement.py` — 30/30 tests passing
+- No training required (pure computation from pose keypoints)
