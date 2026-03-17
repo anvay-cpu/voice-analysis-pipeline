@@ -1,0 +1,21 @@
+{
+  "test_acc": 0.5449986068542769,
+  "val_acc": 0.5451062347614072,
+  "best_epoch": 13,
+  "num_classes": 7,
+  "classes": [
+    "Angry",
+    "Disgust",
+    "Fear",
+    "Happy",
+    "Sad",
+    "Surprise",
+    "Neutral"
+  ],
+  "train_samples": 25838,
+  "val_samples": 2871,
+  "test_samples": 7178,
+  "model_params": 4337283,
+  "backbone": "efficientnet_b0",
+  "input_size": 224
+}
