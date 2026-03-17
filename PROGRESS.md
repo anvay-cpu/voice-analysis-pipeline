@@ -29,7 +29,7 @@ Last updated: 2026-03-15
 - **Pipeline is end-to-end functional and ready for Modality 2**
 
 ## Modality 2 — Body Language Pipeline
-Last updated: 2026-03-17
+Last updated: 2026-03-18
 
 - [x] Phase 1: Environment Setup — COMPLETE
 - [x] Phase 2: Video Preprocessing — COMPLETE (frame extraction + YOLOv8 person detection)
@@ -41,7 +41,9 @@ Last updated: 2026-03-17
 - [x] Phase 8: Facial Emotion — COMPLETE (EfficientNet-B0, test acc=0.5450, 21/21 tests)
 - [x] Phase 9: Stage Movement — COMPLETE (4 patterns, 30/30 tests, no training needed)
 - [x] Phase 10: Temporal Assembly — COMPLETE (temporal_model + output_assembler + pipeline, 28/28 tests)
-- [ ] Phase 11: Testing & Validation
+- [x] Phase 11: Testing & Validation — COMPLETE (3 videos, 95/95 tests, validation report written)
+
+## Status — MODALITY 2 COMPLETE
 
 ### Phase 5 Final
 - 3-class taxonomy: Active Gesture, Adaptor, Rest
@@ -80,3 +82,11 @@ Last updated: 2026-03-17
 - `src/body/pipeline.py` — `BodyAnalysisPipeline` orchestrator with graceful degradation
 - CLI: `python -m src.body.pipeline --video input.mp4`
 - `tests/modality2/test_temporal_assembly.py` — 28/28 tests passing
+
+### Phase 11 Validation Summary
+- 3 test videos processed on Google Colab (T4 GPU): good speaker, nervous speaker, monotone speaker
+- 95 tests passed (84 structure + 11 contrast)
+- Key differentiators: nervous speaker → Pacing (3.0), good speaker → Roaming (7.0), monotone → Purposeful (8.0)
+- Gaze engagement at 0.0 for all — face too small in stage-distance camera angles (known limitation)
+- Full report: docs/validation_report_m2.md
+- **Modality 2 pipeline is end-to-end functional and ready for multimodal fusion**

@@ -1,0 +1,3996 @@
+{
+  "video": "data/raw/test_good_speaker_5min.mp4",
+  "duration_sec": 300.0,
+  "total_frames": 1500,
+  "fps": 5,
+  "summary": {
+    "posture_score": 64.7,
+    "dominant_gesture": "Active Gesture",
+    "dominant_hand_state": "Other",
+    "audience_engagement": 0.0,
+    "dominant_emotion": "Surprise",
+    "movement_pattern": "Roaming",
+    "stage_usage_score": 7.0
+  },
+  "segments": [
+    {
+      "timestamp_start": 0.0,
+      "timestamp_end": 6.0,
+      "frame_start": 0,
+      "frame_end": 30,
+      "posture": {
+        "score_mean": 30.0,
+        "score_std": 0.0,
+        "shoulder_deg": 0.0,
+        "spine_deg": 0.0
+      },
+      "gesture": {
+        "dominant": "Rest",
+        "distribution": {
+          "Rest": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 1.0
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Angry",
+        "confidence": 0.342
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0
+      }
+    },
+    {
+      "timestamp_start": 3.0,
+      "timestamp_end": 9.0,
+      "frame_start": 15,
+      "frame_end": 45,
+      "posture": {
+        "score_mean": 53.7,
+        "score_std": 6.3,
+        "shoulder_deg": 0.0,
+        "spine_deg": 83.3
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.93,
+          "Open Palm": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Angry",
+        "confidence": 0.356
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.035
+      }
+    },
+    {
+      "timestamp_start": 6.0,
+      "timestamp_end": 12.0,
+      "frame_start": 30,
+      "frame_end": 60,
+      "posture": {
+        "score_mean": 59.5,
+        "score_std": 5.6,
+        "shoulder_deg": 0.0,
+        "spine_deg": 97.2
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.63,
+          "Open Palm": 0.3,
+          "Steepling": 0.03,
+          "Crossed Arms": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Neutral",
+        "confidence": 0.344
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0261
+      }
+    },
+    {
+      "timestamp_start": 9.0,
+      "timestamp_end": 15.0,
+      "frame_start": 45,
+      "frame_end": 75,
+      "posture": {
+        "score_mean": 62.6,
+        "score_std": 4.0,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.47,
+          "Steepling": 0.27,
+          "Open Palm": 0.23,
+          "Crossed Arms": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.314
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0192
+      }
+    },
+    {
+      "timestamp_start": 12.0,
+      "timestamp_end": 18.0,
+      "frame_start": 60,
+      "frame_end": 90,
+      "posture": {
+        "score_mean": 63.4,
+        "score_std": 1.8,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.73,
+          "Steepling": 0.23,
+          "Crossed Arms": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.278
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0106
+      }
+    },
+    {
+      "timestamp_start": 15.0,
+      "timestamp_end": 21.0,
+      "frame_start": 75,
+      "frame_end": 105,
+      "posture": {
+        "score_mean": 65.5,
+        "score_std": 5.1,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.73,
+          "Steepling": 0.23,
+          "Crossed Arms": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.273
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0148
+      }
+    },
+    {
+      "timestamp_start": 18.0,
+      "timestamp_end": 24.0,
+      "frame_start": 90,
+      "frame_end": 120,
+      "posture": {
+        "score_mean": 70.8,
+        "score_std": 4.7,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Steepling",
+        "distribution": {
+          "Steepling": 0.57,
+          "Other": 0.3,
+          "Open Palm": 0.1,
+          "Crossed Arms": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.287
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0215
+      }
+    },
+    {
+      "timestamp_start": 21.0,
+      "timestamp_end": 27.0,
+      "frame_start": 105,
+      "frame_end": 135,
+      "posture": {
+        "score_mean": 70.3,
+        "score_std": 3.5,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.5,
+          "Steepling": 0.33,
+          "Open Palm": 0.13,
+          "Crossed Arms": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.354
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0205
+      }
+    },
+    {
+      "timestamp_start": 24.0,
+      "timestamp_end": 30.0,
+      "frame_start": 120,
+      "frame_end": 150,
+      "posture": {
+        "score_mean": 66.5,
+        "score_std": 3.5,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.9,
+          "Open Palm": 0.07,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.385
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0187
+      }
+    },
+    {
+      "timestamp_start": 27.0,
+      "timestamp_end": 33.0,
+      "frame_start": 135,
+      "frame_end": 165,
+      "posture": {
+        "score_mean": 64.8,
+        "score_std": 4.5,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.83,
+          "Steepling": 0.07,
+          "Crossed Arms": 0.07,
+          "Open Palm": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.413
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0159
+      }
+    },
+    {
+      "timestamp_start": 30.0,
+      "timestamp_end": 36.0,
+      "frame_start": 150,
+      "frame_end": 180,
+      "posture": {
+        "score_mean": 69.1,
+        "score_std": 5.9,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.8,
+          "Steepling": 0.13,
+          "Crossed Arms": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.388
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0146
+      }
+    },
+    {
+      "timestamp_start": 33.0,
+      "timestamp_end": 39.0,
+      "frame_start": 165,
+      "frame_end": 195,
+      "posture": {
+        "score_mean": 73.4,
+        "score_std": 2.2,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.9,
+          "Steepling": 0.1
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.415
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0115
+      }
+    },
+    {
+      "timestamp_start": 36.0,
+      "timestamp_end": 42.0,
+      "frame_start": 180,
+      "frame_end": 210,
+      "posture": {
+        "score_mean": 70.8,
+        "score_std": 2.7,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.77,
+          "Open Palm": 0.2,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.492
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0164
+      }
+    },
+    {
+      "timestamp_start": 39.0,
+      "timestamp_end": 45.0,
+      "frame_start": 195,
+      "frame_end": 225,
+      "posture": {
+        "score_mean": 70.3,
+        "score_std": 2.3,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.67,
+          "Open Palm": 0.2,
+          "Steepling": 0.13
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.425
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0174
+      }
+    },
+    {
+      "timestamp_start": 42.0,
+      "timestamp_end": 48.0,
+      "frame_start": 210,
+      "frame_end": 240,
+      "posture": {
+        "score_mean": 73.2,
+        "score_std": 2.4,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.87,
+          "Steepling": 0.13
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.466
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0109
+      }
+    },
+    {
+      "timestamp_start": 45.0,
+      "timestamp_end": 51.0,
+      "frame_start": 225,
+      "frame_end": 255,
+      "posture": {
+        "score_mean": 74.3,
+        "score_std": 1.7,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.77,
+          "Steepling": 0.17,
+          "Open Palm": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.527
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0127
+      }
+    },
+    {
+      "timestamp_start": 48.0,
+      "timestamp_end": 54.0,
+      "frame_start": 240,
+      "frame_end": 270,
+      "posture": {
+        "score_mean": 71.6,
+        "score_std": 2.9,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.57,
+          "Steepling": 0.23,
+          "Open Palm": 0.2
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.489
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0136
+      }
+    },
+    {
+      "timestamp_start": 51.0,
+      "timestamp_end": 57.0,
+      "frame_start": 255,
+      "frame_end": 285,
+      "posture": {
+        "score_mean": 69.3,
+        "score_std": 1.8,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.57,
+          "Open Palm": 0.3,
+          "Steepling": 0.13
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.432
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0174
+      }
+    },
+    {
+      "timestamp_start": 54.0,
+      "timestamp_end": 60.0,
+      "frame_start": 270,
+      "frame_end": 300,
+      "posture": {
+        "score_mean": 70.1,
+        "score_std": 2.3,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.67,
+          "Open Palm": 0.17,
+          "Steepling": 0.13,
+          "Pointing": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.346
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0162
+      }
+    },
+    {
+      "timestamp_start": 57.0,
+      "timestamp_end": 63.0,
+      "frame_start": 285,
+      "frame_end": 315,
+      "posture": {
+        "score_mean": 70.2,
+        "score_std": 2.8,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.47,
+          "Open Palm": 0.33,
+          "Steepling": 0.13,
+          "Pointing": 0.03,
+          "Crossed Arms": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.396
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.018
+      }
+    },
+    {
+      "timestamp_start": 60.0,
+      "timestamp_end": 66.0,
+      "frame_start": 300,
+      "frame_end": 330,
+      "posture": {
+        "score_mean": 69.3,
+        "score_std": 3.7,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.43,
+          "Open Palm": 0.33,
+          "Steepling": 0.17,
+          "Crossed Arms": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.444
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0206
+      }
+    },
+    {
+      "timestamp_start": 63.0,
+      "timestamp_end": 69.0,
+      "frame_start": 315,
+      "frame_end": 345,
+      "posture": {
+        "score_mean": 71.1,
+        "score_std": 4.5,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.4,
+          "Open Palm": 0.37,
+          "Steepling": 0.2,
+          "Crossed Arms": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.397
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0259
+      }
+    },
+    {
+      "timestamp_start": 66.0,
+      "timestamp_end": 72.0,
+      "frame_start": 330,
+      "frame_end": 360,
+      "posture": {
+        "score_mean": 67.0,
+        "score_std": 7.0,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.5,
+          "Other": 0.33,
+          "Steepling": 0.17
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.463
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0294
+      }
+    },
+    {
+      "timestamp_start": 69.0,
+      "timestamp_end": 75.0,
+      "frame_start": 345,
+      "frame_end": 375,
+      "posture": {
+        "score_mean": 62.3,
+        "score_std": 3.1,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.47,
+          "Open Palm": 0.4,
+          "Steepling": 0.13
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.473
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0222
+      }
+    },
+    {
+      "timestamp_start": 72.0,
+      "timestamp_end": 78.0,
+      "frame_start": 360,
+      "frame_end": 390,
+      "posture": {
+        "score_mean": 65.4,
+        "score_std": 3.8,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.7,
+          "Other": 0.27,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.373
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0186
+      }
+    },
+    {
+      "timestamp_start": 75.0,
+      "timestamp_end": 81.0,
+      "frame_start": 375,
+      "frame_end": 405,
+      "posture": {
+        "score_mean": 67.8,
+        "score_std": 3.8,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.83,
+          "Other": 0.1,
+          "Pointing": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.372
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0252
+      }
+    },
+    {
+      "timestamp_start": 78.0,
+      "timestamp_end": 84.0,
+      "frame_start": 390,
+      "frame_end": 420,
+      "posture": {
+        "score_mean": 68.5,
+        "score_std": 3.1,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.63,
+          "Other": 0.27,
+          "Pointing": 0.07,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.402
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0294
+      }
+    },
+    {
+      "timestamp_start": 81.0,
+      "timestamp_end": 87.0,
+      "frame_start": 405,
+      "frame_end": 435,
+      "posture": {
+        "score_mean": 63.6,
+        "score_std": 6.1,
+        "shoulder_deg": 0.0,
+        "spine_deg": 99.8
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.57,
+          "Open Palm": 0.37,
+          "Steepling": 0.03,
+          "Pointing": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.423
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0276
+      }
+    },
+    {
+      "timestamp_start": 84.0,
+      "timestamp_end": 90.0,
+      "frame_start": 420,
+      "frame_end": 450,
+      "posture": {
+        "score_mean": 62.6,
+        "score_std": 5.5,
+        "shoulder_deg": 0.0,
+        "spine_deg": 99.8
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.5,
+          "Other": 0.47,
+          "Pointing": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.393
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0245
+      }
+    },
+    {
+      "timestamp_start": 87.0,
+      "timestamp_end": 93.0,
+      "frame_start": 435,
+      "frame_end": 465,
+      "posture": {
+        "score_mean": 66.5,
+        "score_std": 5.2,
+        "shoulder_deg": 0.0,
+        "spine_deg": 99.6
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.53,
+          "Other": 0.33,
+          "Pointing": 0.07,
+          "Crossed Arms": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.468
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0342
+      }
+    },
+    {
+      "timestamp_start": 90.0,
+      "timestamp_end": 96.0,
+      "frame_start": 450,
+      "frame_end": 480,
+      "posture": {
+        "score_mean": 67.8,
+        "score_std": 5.4,
+        "shoulder_deg": 0.0,
+        "spine_deg": 99.6
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.43,
+          "Crossed Arms": 0.33,
+          "Open Palm": 0.17,
+          "Pointing": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Happy",
+        "confidence": 0.8
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0348
+      }
+    },
+    {
+      "timestamp_start": 93.0,
+      "timestamp_end": 99.0,
+      "frame_start": 465,
+      "frame_end": 495,
+      "posture": {
+        "score_mean": 65.5,
+        "score_std": 5.3,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.57,
+          "Crossed Arms": 0.3,
+          "Open Palm": 0.07,
+          "Steepling": 0.03,
+          "Pointing": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Happy",
+        "confidence": 0.668
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0339
+      }
+    },
+    {
+      "timestamp_start": 96.0,
+      "timestamp_end": 102.0,
+      "frame_start": 480,
+      "frame_end": 510,
+      "posture": {
+        "score_mean": 59.8,
+        "score_std": 3.5,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.63,
+          "Open Palm": 0.2,
+          "Pointing": 0.1,
+          "Crossed Arms": 0.03,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.388
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0345
+      }
+    },
+    {
+      "timestamp_start": 99.0,
+      "timestamp_end": 105.0,
+      "frame_start": 495,
+      "frame_end": 525,
+      "posture": {
+        "score_mean": 61.8,
+        "score_std": 5.1,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.63,
+          "Open Palm": 0.17,
+          "Crossed Arms": 0.1,
+          "Pointing": 0.07,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.363
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0166
+      }
+    },
+    {
+      "timestamp_start": 102.0,
+      "timestamp_end": 108.0,
+      "frame_start": 510,
+      "frame_end": 540,
+      "posture": {
+        "score_mean": 65.4,
+        "score_std": 2.7,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.73,
+          "Steepling": 0.13,
+          "Crossed Arms": 0.1,
+          "Open Palm": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.28
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0089
+      }
+    },
+    {
+      "timestamp_start": 105.0,
+      "timestamp_end": 111.0,
+      "frame_start": 525,
+      "frame_end": 555,
+      "posture": {
+        "score_mean": 65.8,
+        "score_std": 2.0,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.67,
+          "Steepling": 0.2,
+          "Open Palm": 0.13
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.317
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0157
+      }
+    },
+    {
+      "timestamp_start": 108.0,
+      "timestamp_end": 114.0,
+      "frame_start": 540,
+      "frame_end": 570,
+      "posture": {
+        "score_mean": 66.3,
+        "score_std": 2.4,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.37,
+          "Other": 0.33,
+          "Steepling": 0.3
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.383
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0224
+      }
+    },
+    {
+      "timestamp_start": 111.0,
+      "timestamp_end": 117.0,
+      "frame_start": 555,
+      "frame_end": 585,
+      "posture": {
+        "score_mean": 67.0,
+        "score_std": 4.4,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.67,
+          "Steepling": 0.2,
+          "Other": 0.13
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.355
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.023
+      }
+    },
+    {
+      "timestamp_start": 114.0,
+      "timestamp_end": 120.0,
+      "frame_start": 570,
+      "frame_end": 600,
+      "posture": {
+        "score_mean": 64.9,
+        "score_std": 5.4,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.6,
+          "Other": 0.2,
+          "Steepling": 0.2
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.346
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.025
+      }
+    },
+    {
+      "timestamp_start": 117.0,
+      "timestamp_end": 123.0,
+      "frame_start": 585,
+      "frame_end": 615,
+      "posture": {
+        "score_mean": 63.9,
+        "score_std": 4.0,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.53,
+          "Steepling": 0.3,
+          "Other": 0.17
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.393
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0264
+      }
+    },
+    {
+      "timestamp_start": 120.0,
+      "timestamp_end": 126.0,
+      "frame_start": 600,
+      "frame_end": 630,
+      "posture": {
+        "score_mean": 65.5,
+        "score_std": 3.7,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.8,
+          "Steepling": 0.13,
+          "Other": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.398
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0333
+      }
+    },
+    {
+      "timestamp_start": 123.0,
+      "timestamp_end": 129.0,
+      "frame_start": 615,
+      "frame_end": 645,
+      "posture": {
+        "score_mean": 64.0,
+        "score_std": 2.6,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.73,
+          "Other": 0.2,
+          "Steepling": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.372
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0258
+      }
+    },
+    {
+      "timestamp_start": 126.0,
+      "timestamp_end": 132.0,
+      "frame_start": 630,
+      "frame_end": 660,
+      "posture": {
+        "score_mean": 61.3,
+        "score_std": 2.8,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.43,
+          "Pointing": 0.3,
+          "Other": 0.23,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.426
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0196
+      }
+    },
+    {
+      "timestamp_start": 129.0,
+      "timestamp_end": 135.0,
+      "frame_start": 645,
+      "frame_end": 675,
+      "posture": {
+        "score_mean": 60.9,
+        "score_std": 3.2,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.5,
+          "Pointing": 0.3,
+          "Other": 0.1,
+          "Crossed Arms": 0.07,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.507
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0264
+      }
+    },
+    {
+      "timestamp_start": 132.0,
+      "timestamp_end": 138.0,
+      "frame_start": 660,
+      "frame_end": 690,
+      "posture": {
+        "score_mean": 61.5,
+        "score_std": 3.6,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.87,
+          "Crossed Arms": 0.07,
+          "Other": 0.03,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.476
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0274
+      }
+    },
+    {
+      "timestamp_start": 135.0,
+      "timestamp_end": 141.0,
+      "frame_start": 675,
+      "frame_end": 705,
+      "posture": {
+        "score_mean": 61.1,
+        "score_std": 3.1,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.53,
+          "Other": 0.4,
+          "Steepling": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.436
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0206
+      }
+    },
+    {
+      "timestamp_start": 138.0,
+      "timestamp_end": 144.0,
+      "frame_start": 690,
+      "frame_end": 720,
+      "posture": {
+        "score_mean": 63.1,
+        "score_std": 4.2,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.7,
+          "Open Palm": 0.23,
+          "Steepling": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.387
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0235
+      }
+    },
+    {
+      "timestamp_start": 141.0,
+      "timestamp_end": 147.0,
+      "frame_start": 705,
+      "frame_end": 735,
+      "posture": {
+        "score_mean": 66.7,
+        "score_std": 4.7,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.47,
+          "Other": 0.37,
+          "Steepling": 0.17
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.331
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0315
+      }
+    },
+    {
+      "timestamp_start": 144.0,
+      "timestamp_end": 150.0,
+      "frame_start": 720,
+      "frame_end": 750,
+      "posture": {
+        "score_mean": 67.9,
+        "score_std": 2.7,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.57,
+          "Open Palm": 0.27,
+          "Steepling": 0.17
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.308
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0234
+      }
+    },
+    {
+      "timestamp_start": 147.0,
+      "timestamp_end": 153.0,
+      "frame_start": 735,
+      "frame_end": 765,
+      "posture": {
+        "score_mean": 66.6,
+        "score_std": 1.5,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.97,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.373
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0177
+      }
+    },
+    {
+      "timestamp_start": 150.0,
+      "timestamp_end": 156.0,
+      "frame_start": 750,
+      "frame_end": 780,
+      "posture": {
+        "score_mean": 65.4,
+        "score_std": 1.2,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.77,
+          "Open Palm": 0.17,
+          "Steepling": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.432
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0225
+      }
+    },
+    {
+      "timestamp_start": 153.0,
+      "timestamp_end": 159.0,
+      "frame_start": 765,
+      "frame_end": 795,
+      "posture": {
+        "score_mean": 65.9,
+        "score_std": 2.2,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.6,
+          "Open Palm": 0.37,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.35
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0222
+      }
+    },
+    {
+      "timestamp_start": 156.0,
+      "timestamp_end": 162.0,
+      "frame_start": 780,
+      "frame_end": 810,
+      "posture": {
+        "score_mean": 66.9,
+        "score_std": 2.5,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.67,
+          "Other": 0.33
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.296
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.024
+      }
+    },
+    {
+      "timestamp_start": 159.0,
+      "timestamp_end": 165.0,
+      "frame_start": 795,
+      "frame_end": 825,
+      "posture": {
+        "score_mean": 66.7,
+        "score_std": 2.5,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.53,
+          "Open Palm": 0.47
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.59
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0259
+      }
+    },
+    {
+      "timestamp_start": 162.0,
+      "timestamp_end": 168.0,
+      "frame_start": 810,
+      "frame_end": 840,
+      "posture": {
+        "score_mean": 50.0,
+        "score_std": 0.0,
+        "shoulder_deg": 0.0,
+        "spine_deg": 0.0
+      },
+      "gesture": {
+        "dominant": "Rest",
+        "distribution": {
+          "Rest": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 1.0
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.828
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0
+      }
+    },
+    {
+      "timestamp_start": 165.0,
+      "timestamp_end": 171.0,
+      "frame_start": 825,
+      "frame_end": 855,
+      "posture": {
+        "score_mean": 50.0,
+        "score_std": 0.0,
+        "shoulder_deg": 0.0,
+        "spine_deg": 0.0
+      },
+      "gesture": {
+        "dominant": "Rest",
+        "distribution": {
+          "Rest": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 1.0
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.889
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0
+      }
+    },
+    {
+      "timestamp_start": 168.0,
+      "timestamp_end": 174.0,
+      "frame_start": 840,
+      "frame_end": 870,
+      "posture": {
+        "score_mean": 62.9,
+        "score_std": 4.4,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.87,
+          "Open Palm": 0.1,
+          "Crossed Arms": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Sad",
+        "confidence": 0.813
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0176
+      }
+    },
+    {
+      "timestamp_start": 171.0,
+      "timestamp_end": 177.0,
+      "frame_start": 855,
+      "frame_end": 885,
+      "posture": {
+        "score_mean": 63.1,
+        "score_std": 4.9,
+        "shoulder_deg": 0.0,
+        "spine_deg": 99.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.47,
+          "Open Palm": 0.37,
+          "Crossed Arms": 0.1,
+          "Steepling": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.534
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0177
+      }
+    },
+    {
+      "timestamp_start": 174.0,
+      "timestamp_end": 180.0,
+      "frame_start": 870,
+      "frame_end": 900,
+      "posture": {
+        "score_mean": 66.5,
+        "score_std": 6.5,
+        "shoulder_deg": 0.0,
+        "spine_deg": 99.2
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.47,
+          "Other": 0.33,
+          "Crossed Arms": 0.13,
+          "Steepling": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.376
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0197
+      }
+    },
+    {
+      "timestamp_start": 177.0,
+      "timestamp_end": 183.0,
+      "frame_start": 885,
+      "frame_end": 915,
+      "posture": {
+        "score_mean": 70.0,
+        "score_std": 5.9,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.73,
+          "Open Palm": 0.2,
+          "Crossed Arms": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.49
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0202
+      }
+    },
+    {
+      "timestamp_start": 180.0,
+      "timestamp_end": 186.0,
+      "frame_start": 900,
+      "frame_end": 930,
+      "posture": {
+        "score_mean": 71.9,
+        "score_std": 3.0,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.9,
+          "Open Palm": 0.1
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Fear",
+        "confidence": 0.785
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0432
+      }
+    },
+    {
+      "timestamp_start": 183.0,
+      "timestamp_end": 189.0,
+      "frame_start": 915,
+      "frame_end": 945,
+      "posture": {
+        "score_mean": 66.9,
+        "score_std": 7.1,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.57,
+          "Open Palm": 0.43
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.688
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0336
+      }
+    },
+    {
+      "timestamp_start": 186.0,
+      "timestamp_end": 192.0,
+      "frame_start": 930,
+      "frame_end": 960,
+      "posture": {
+        "score_mean": 63.2,
+        "score_std": 7.2,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.57,
+          "Other": 0.4,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.48
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0293
+      }
+    },
+    {
+      "timestamp_start": 189.0,
+      "timestamp_end": 195.0,
+      "frame_start": 945,
+      "frame_end": 975,
+      "posture": {
+        "score_mean": 60.1,
+        "score_std": 5.7,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.73,
+          "Open Palm": 0.23,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Fear",
+        "confidence": 0.72
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0291
+      }
+    },
+    {
+      "timestamp_start": 192.0,
+      "timestamp_end": 198.0,
+      "frame_start": 960,
+      "frame_end": 990,
+      "posture": {
+        "score_mean": 62.1,
+        "score_std": 1.3,
+        "shoulder_deg": 0.0,
+        "spine_deg": 84.7
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 1.0
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Fear",
+        "confidence": 0.929
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0031
+      }
+    },
+    {
+      "timestamp_start": 195.0,
+      "timestamp_end": 201.0,
+      "frame_start": 975,
+      "frame_end": 1005,
+      "posture": {
+        "score_mean": 56.9,
+        "score_std": 6.5,
+        "shoulder_deg": 0.0,
+        "spine_deg": 80.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.93,
+          "Behind Back": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Fear",
+        "confidence": 0.921
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0066
+      }
+    },
+    {
+      "timestamp_start": 198.0,
+      "timestamp_end": 204.0,
+      "frame_start": 990,
+      "frame_end": 1020,
+      "posture": {
+        "score_mean": 56.4,
+        "score_std": 5.8,
+        "shoulder_deg": 0.0,
+        "spine_deg": 80.9
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.77,
+          "Open Palm": 0.17,
+          "Behind Back": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Fear",
+        "confidence": 0.829
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0173
+      }
+    },
+    {
+      "timestamp_start": 201.0,
+      "timestamp_end": 207.0,
+      "frame_start": 1005,
+      "frame_end": 1035,
+      "posture": {
+        "score_mean": 58.7,
+        "score_std": 4.4,
+        "shoulder_deg": 0.0,
+        "spine_deg": 91.7
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.57,
+          "Other": 0.33,
+          "Crossed Arms": 0.07,
+          "Pointing": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.574
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.024
+      }
+    },
+    {
+      "timestamp_start": 204.0,
+      "timestamp_end": 210.0,
+      "frame_start": 1020,
+      "frame_end": 1050,
+      "posture": {
+        "score_mean": 62.5,
+        "score_std": 4.3,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.4,
+          "Crossed Arms": 0.3,
+          "Other": 0.23,
+          "Pointing": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.427
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0186
+      }
+    },
+    {
+      "timestamp_start": 207.0,
+      "timestamp_end": 213.0,
+      "frame_start": 1035,
+      "frame_end": 1065,
+      "posture": {
+        "score_mean": 67.4,
+        "score_std": 4.7,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.53,
+          "Crossed Arms": 0.27,
+          "Open Palm": 0.13,
+          "Pointing": 0.03,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.468
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0162
+      }
+    },
+    {
+      "timestamp_start": 210.0,
+      "timestamp_end": 216.0,
+      "frame_start": 1050,
+      "frame_end": 1080,
+      "posture": {
+        "score_mean": 69.4,
+        "score_std": 4.8,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.77,
+          "Open Palm": 0.13,
+          "Steepling": 0.07,
+          "Crossed Arms": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.625
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0181
+      }
+    },
+    {
+      "timestamp_start": 213.0,
+      "timestamp_end": 219.0,
+      "frame_start": 1065,
+      "frame_end": 1095,
+      "posture": {
+        "score_mean": 68.6,
+        "score_std": 3.4,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.97,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.81
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0188
+      }
+    },
+    {
+      "timestamp_start": 216.0,
+      "timestamp_end": 222.0,
+      "frame_start": 1080,
+      "frame_end": 1110,
+      "posture": {
+        "score_mean": 30.0,
+        "score_std": 0.0,
+        "shoulder_deg": 0.0,
+        "spine_deg": 0.0
+      },
+      "gesture": {
+        "dominant": "Rest",
+        "distribution": {
+          "Rest": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 1.0
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.71
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0053
+      }
+    },
+    {
+      "timestamp_start": 219.0,
+      "timestamp_end": 225.0,
+      "frame_start": 1095,
+      "frame_end": 1125,
+      "posture": {
+        "score_mean": 37.2,
+        "score_std": 11.4,
+        "shoulder_deg": 0.0,
+        "spine_deg": 28.6
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 1.0
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.597
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0216
+      }
+    },
+    {
+      "timestamp_start": 222.0,
+      "timestamp_end": 228.0,
+      "frame_start": 1110,
+      "frame_end": 1140,
+      "posture": {
+        "score_mean": 50.4,
+        "score_std": 10.9,
+        "shoulder_deg": 0.0,
+        "spine_deg": 77.3
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 1.0
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.573
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0329
+      }
+    },
+    {
+      "timestamp_start": 225.0,
+      "timestamp_end": 231.0,
+      "frame_start": 1125,
+      "frame_end": 1155,
+      "posture": {
+        "score_mean": 56.2,
+        "score_std": 2.5,
+        "shoulder_deg": 0.0,
+        "spine_deg": 98.4
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 1.0
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Angry",
+        "confidence": 0.749
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0226
+      }
+    },
+    {
+      "timestamp_start": 228.0,
+      "timestamp_end": 234.0,
+      "frame_start": 1140,
+      "frame_end": 1170,
+      "posture": {
+        "score_mean": 69.2,
+        "score_std": 1.8,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.8,
+          "Open Palm": 0.2
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Angry",
+        "confidence": 0.895
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0248
+      }
+    },
+    {
+      "timestamp_start": 231.0,
+      "timestamp_end": 237.0,
+      "frame_start": 1155,
+      "frame_end": 1185,
+      "posture": {
+        "score_mean": 72.0,
+        "score_std": 2.8,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.43,
+          "Other": 0.37,
+          "Steepling": 0.17,
+          "Crossed Arms": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.578
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0293
+      }
+    },
+    {
+      "timestamp_start": 234.0,
+      "timestamp_end": 240.0,
+      "frame_start": 1170,
+      "frame_end": 1200,
+      "posture": {
+        "score_mean": 72.5,
+        "score_std": 2.8,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.37,
+          "Steepling": 0.37,
+          "Other": 0.23,
+          "Crossed Arms": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.488
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0289
+      }
+    },
+    {
+      "timestamp_start": 237.0,
+      "timestamp_end": 243.0,
+      "frame_start": 1185,
+      "frame_end": 1215,
+      "posture": {
+        "score_mean": 71.7,
+        "score_std": 3.3,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.67,
+          "Steepling": 0.2,
+          "Open Palm": 0.13
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Fear",
+        "confidence": 0.806
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0277
+      }
+    },
+    {
+      "timestamp_start": 240.0,
+      "timestamp_end": 246.0,
+      "frame_start": 1200,
+      "frame_end": 1230,
+      "posture": {
+        "score_mean": 63.9,
+        "score_std": 4.1,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.93,
+          "Pointing": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Fear",
+        "confidence": 0.786
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0157
+      }
+    },
+    {
+      "timestamp_start": 243.0,
+      "timestamp_end": 249.0,
+      "frame_start": 1215,
+      "frame_end": 1245,
+      "posture": {
+        "score_mean": 67.4,
+        "score_std": 4.1,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.7,
+          "Pointing": 0.13,
+          "Steepling": 0.1,
+          "Crossed Arms": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.587
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.03
+      }
+    },
+    {
+      "timestamp_start": 246.0,
+      "timestamp_end": 252.0,
+      "frame_start": 1230,
+      "frame_end": 1260,
+      "posture": {
+        "score_mean": 71.7,
+        "score_std": 2.8,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.43,
+          "Crossed Arms": 0.4,
+          "Steepling": 0.1,
+          "Pointing": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.801
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0266
+      }
+    },
+    {
+      "timestamp_start": 249.0,
+      "timestamp_end": 255.0,
+      "frame_start": 1245,
+      "frame_end": 1275,
+      "posture": {
+        "score_mean": 71.6,
+        "score_std": 7.1,
+        "shoulder_deg": 0.0,
+        "spine_deg": 98.3
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Crossed Arms",
+        "distribution": {
+          "Crossed Arms": 0.53,
+          "Other": 0.3,
+          "Open Palm": 0.13,
+          "Pointing": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Angry",
+        "confidence": 0.917
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.036
+      }
+    },
+    {
+      "timestamp_start": 252.0,
+      "timestamp_end": 258.0,
+      "frame_start": 1260,
+      "frame_end": 1290,
+      "posture": {
+        "score_mean": 69.3,
+        "score_std": 8.6,
+        "shoulder_deg": 0.0,
+        "spine_deg": 98.2
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.37,
+          "Crossed Arms": 0.33,
+          "Other": 0.27,
+          "Pointing": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.685
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0428
+      }
+    },
+    {
+      "timestamp_start": 255.0,
+      "timestamp_end": 261.0,
+      "frame_start": 1275,
+      "frame_end": 1305,
+      "posture": {
+        "score_mean": 67.8,
+        "score_std": 8.7,
+        "shoulder_deg": 0.0,
+        "spine_deg": 99.6
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.4,
+          "Other": 0.3,
+          "Crossed Arms": 0.27,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.496
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0289
+      }
+    },
+    {
+      "timestamp_start": 258.0,
+      "timestamp_end": 264.0,
+      "frame_start": 1290,
+      "frame_end": 1320,
+      "posture": {
+        "score_mean": 67.9,
+        "score_std": 7.9,
+        "shoulder_deg": 0.0,
+        "spine_deg": 99.8
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.37,
+          "Other": 0.37,
+          "Crossed Arms": 0.23,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.433
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0282
+      }
+    },
+    {
+      "timestamp_start": 261.0,
+      "timestamp_end": 267.0,
+      "frame_start": 1305,
+      "frame_end": 1335,
+      "posture": {
+        "score_mean": 67.8,
+        "score_std": 5.9,
+        "shoulder_deg": 0.0,
+        "spine_deg": 99.3
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.47,
+          "Open Palm": 0.4,
+          "Crossed Arms": 0.13
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.407
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0293
+      }
+    },
+    {
+      "timestamp_start": 264.0,
+      "timestamp_end": 270.0,
+      "frame_start": 1320,
+      "frame_end": 1350,
+      "posture": {
+        "score_mean": 63.8,
+        "score_std": 6.3,
+        "shoulder_deg": 0.0,
+        "spine_deg": 97.9
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.53,
+          "Open Palm": 0.4,
+          "Crossed Arms": 0.03,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.406
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0308
+      }
+    },
+    {
+      "timestamp_start": 267.0,
+      "timestamp_end": 273.0,
+      "frame_start": 1335,
+      "frame_end": 1365,
+      "posture": {
+        "score_mean": 63.9,
+        "score_std": 6.7,
+        "shoulder_deg": 0.0,
+        "spine_deg": 98.5
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.47,
+          "Open Palm": 0.4,
+          "Steepling": 0.07,
+          "Crossed Arms": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.488
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0297
+      }
+    },
+    {
+      "timestamp_start": 270.0,
+      "timestamp_end": 276.0,
+      "frame_start": 1350,
+      "frame_end": 1380,
+      "posture": {
+        "score_mean": 68.2,
+        "score_std": 5.1,
+        "shoulder_deg": 0.0,
+        "spine_deg": 99.9
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.4,
+          "Other": 0.2,
+          "Steepling": 0.2,
+          "Crossed Arms": 0.2
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.455
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0275
+      }
+    },
+    {
+      "timestamp_start": 273.0,
+      "timestamp_end": 279.0,
+      "frame_start": 1365,
+      "frame_end": 1395,
+      "posture": {
+        "score_mean": 68.9,
+        "score_std": 3.0,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Steepling",
+        "distribution": {
+          "Steepling": 0.6,
+          "Open Palm": 0.2,
+          "Crossed Arms": 0.2
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.367
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0215
+      }
+    },
+    {
+      "timestamp_start": 276.0,
+      "timestamp_end": 282.0,
+      "frame_start": 1380,
+      "frame_end": 1410,
+      "posture": {
+        "score_mean": 67.0,
+        "score_std": 2.8,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Steepling",
+        "distribution": {
+          "Steepling": 0.53,
+          "Other": 0.4,
+          "Crossed Arms": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.429
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0182
+      }
+    },
+    {
+      "timestamp_start": 279.0,
+      "timestamp_end": 285.0,
+      "frame_start": 1395,
+      "frame_end": 1425,
+      "posture": {
+        "score_mean": 64.0,
+        "score_std": 4.9,
+        "shoulder_deg": 0.0,
+        "spine_deg": 98.4
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.53,
+          "Crossed Arms": 0.17,
+          "Open Palm": 0.13,
+          "Steepling": 0.1,
+          "Pointing": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.503
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0232
+      }
+    },
+    {
+      "timestamp_start": 282.0,
+      "timestamp_end": 288.0,
+      "frame_start": 1410,
+      "frame_end": 1440,
+      "posture": {
+        "score_mean": 66.8,
+        "score_std": 7.1,
+        "shoulder_deg": 0.0,
+        "spine_deg": 98.1
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.37,
+          "Open Palm": 0.33,
+          "Crossed Arms": 0.2,
+          "Pointing": 0.1
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.467
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0336
+      }
+    },
+    {
+      "timestamp_start": 285.0,
+      "timestamp_end": 291.0,
+      "frame_start": 1425,
+      "frame_end": 1455,
+      "posture": {
+        "score_mean": 71.5,
+        "score_std": 3.1,
+        "shoulder_deg": 0.0,
+        "spine_deg": 99.7
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.7,
+          "Open Palm": 0.2,
+          "Crossed Arms": 0.03,
+          "Pointing": 0.03,
+          "Steepling": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.388
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0343
+      }
+    },
+    {
+      "timestamp_start": 288.0,
+      "timestamp_end": 294.0,
+      "frame_start": 1440,
+      "frame_end": 1470,
+      "posture": {
+        "score_mean": 66.4,
+        "score_std": 7.0,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Other",
+        "distribution": {
+          "Other": 0.67,
+          "Open Palm": 0.23,
+          "Steepling": 0.1
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.38
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0271
+      }
+    },
+    {
+      "timestamp_start": 291.0,
+      "timestamp_end": 297.0,
+      "frame_start": 1455,
+      "frame_end": 1485,
+      "posture": {
+        "score_mean": 66.0,
+        "score_std": 7.9,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.7,
+          "Other": 0.23,
+          "Steepling": 0.07
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.36
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0429
+      }
+    },
+    {
+      "timestamp_start": 294.0,
+      "timestamp_end": 300.0,
+      "frame_start": 1470,
+      "frame_end": 1500,
+      "posture": {
+        "score_mean": 72.3,
+        "score_std": 4.9,
+        "shoulder_deg": 0.0,
+        "spine_deg": 100.0
+      },
+      "gesture": {
+        "dominant": "Active Gesture",
+        "distribution": {
+          "Active Gesture": 1.0
+        }
+      },
+      "hand_state": {
+        "dominant": "Open Palm",
+        "distribution": {
+          "Open Palm": 0.97,
+          "Other": 0.03
+        }
+      },
+      "gaze": {
+        "distribution": {
+          "Away": 1.0
+        },
+        "engagement_ratio": 0.0
+      },
+      "facial_emotion": {
+        "dominant": "Surprise",
+        "confidence": 0.287
+      },
+      "movement": {
+        "pattern": "Roaming",
+        "velocity": 0.0448
+      }
+    }
+  ]
+}
