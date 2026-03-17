@@ -40,7 +40,7 @@ Last updated: 2026-03-17
 - [x] Phase 7: Gaze Estimation — COMPLETE (MediaPipe Face Mesh, 6 gaze zones, 20/20 tests)
 - [x] Phase 8: Facial Emotion — COMPLETE (EfficientNet-B0, test acc=0.5450, 21/21 tests)
 - [x] Phase 9: Stage Movement — COMPLETE (4 patterns, 30/30 tests, no training needed)
-- [ ] Phase 10: Temporal Assembly
+- [x] Phase 10: Temporal Assembly — COMPLETE (temporal_model + output_assembler + pipeline, 28/28 tests)
 - [ ] Phase 11: Testing & Validation
 
 ### Phase 5 Final
@@ -73,3 +73,10 @@ Last updated: 2026-03-17
 - Stage usage scoring: Purposeful (8) > Roaming (7) > Anchored (5) > Pacing (3)
 - `tests/modality2/test_stage_movement.py` — 30/30 tests passing
 - No training required (pure computation from pose keypoints)
+
+### Phase 10 Status
+- `src/body/temporal_model.py` — 6s windows (50% overlap), smoothing, per-window aggregation
+- `src/body/output_assembler.py` — merges all sub-modules into JSON with summary + segments
+- `src/body/pipeline.py` — `BodyAnalysisPipeline` orchestrator with graceful degradation
+- CLI: `python -m src.body.pipeline --video input.mp4`
+- `tests/modality2/test_temporal_assembly.py` — 28/28 tests passing
