@@ -37,7 +37,7 @@ Last updated: 2026-03-17
 - [x] Phase 4: Posture Scoring — COMPLETE (rule-based + MLP hybrid, MAE=1.32)
 - [x] Phase 5: Gesture Classification — COMPLETE (3-class, Val F1=0.55, trained on Colab)
 - [x] Phase 6: Hand Tracking — COMPLETE (MediaPipe Hands, 8 hand states, 16/16 tests)
-- [ ] Phase 7: Gaze Estimation
+- [x] Phase 7: Gaze Estimation — COMPLETE (MediaPipe Face Mesh, 6 gaze zones, 20/20 tests)
 - [ ] Phase 8: Facial Emotion
 - [ ] Phase 9: Stage Movement
 - [ ] Phase 10: Temporal Assembly
