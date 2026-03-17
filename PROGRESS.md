@@ -38,7 +38,7 @@ Last updated: 2026-03-17
 - [x] Phase 5: Gesture Classification — COMPLETE (3-class, Val F1=0.55, trained on Colab)
 - [x] Phase 6: Hand Tracking — COMPLETE (MediaPipe Hands, 8 hand states, 16/16 tests)
 - [x] Phase 7: Gaze Estimation — COMPLETE (MediaPipe Face Mesh, 6 gaze zones, 20/20 tests)
-- [ ] Phase 8: Facial Emotion
+- [x] Phase 8: Facial Emotion — IN PROGRESS (inference code + tests done, 19/21 pass, Colab notebook ready, awaiting training)
 - [ ] Phase 9: Stage Movement
 - [ ] Phase 10: Temporal Assembly
 - [ ] Phase 11: Testing & Validation
@@ -55,3 +55,13 @@ Last updated: 2026-03-17
 - Uses both hand landmarks (21 pts) and pose keypoints (33 pts) for context
 - `tests/modality2/test_hand_tracker.py` — 16/16 tests passing
 - Model at `models/hand_landmarker.task` (7.5MB, pretrained)
+
+### Phase 8 Status
+- `src/body/facial_emotion.py` — EfficientNet-B0 fine-tuned on FER2013
+- 7 classes: Angry, Disgust, Fear, Happy, Sad, Surprise, Neutral
+- `FacialEmotionNet`: EfficientNet-B0 features + custom head (1280→256→7)
+- `FacialEmotionClassifier`: classify_crop, classify_frame, track_video
+- `tests/modality2/test_facial_emotion.py` — 19/21 tests passing (2 skipped, need trained model)
+- `training/modality2/colab_facial_emotion.ipynb` — Colab notebook ready
+- Target: test accuracy >= 0.60
+- Model will be at `models/facial_emotion/best_model.pt` after Colab training
