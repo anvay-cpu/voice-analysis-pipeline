@@ -29,23 +29,29 @@ Last updated: 2026-03-15
 - **Pipeline is end-to-end functional and ready for Modality 2**
 
 ## Modality 2 — Body Language Pipeline
-Last updated: 2026-03-16
+Last updated: 2026-03-17
 
 - [x] Phase 1: Environment Setup — COMPLETE
 - [x] Phase 2: Video Preprocessing — COMPLETE (frame extraction + YOLOv8 person detection)
 - [x] Phase 3: Pose Estimation — COMPLETE (MediaPipe 33-point skeleton)
 - [x] Phase 4: Posture Scoring — COMPLETE (rule-based + MLP hybrid, MAE=1.32)
-- [ ] Phase 5: Gesture Classification — IN PROGRESS (code + notebook ready, needs Colab training)
-- [ ] Phase 6: Hand Tracking
+- [x] Phase 5: Gesture Classification — COMPLETE (3-class, Val F1=0.55, trained on Colab)
+- [x] Phase 6: Hand Tracking — COMPLETE (MediaPipe Hands, 8 hand states, 16/16 tests)
 - [ ] Phase 7: Gaze Estimation
 - [ ] Phase 8: Facial Emotion
 - [ ] Phase 9: Stage Movement
 - [ ] Phase 10: Temporal Assembly
 - [ ] Phase 11: Testing & Validation
 
-### Phase 5 Status
-- `src/body/gesture_classifier.py` — GestureTransformer model + heuristic fallback (DONE)
-- `training/modality2/colab_gesture_transformer.ipynb` — Colab training notebook (DONE)
-- `tests/modality2/test_gesture.py` — 13/13 tests passing (DONE)
-- 11 training MP4 videos downloaded to `data/raw/` (DONE)
-- **Next:** Run notebook on Colab → train model → download `best_model.pt`
+### Phase 5 Final
+- 3-class taxonomy: Active Gesture, Adaptor, Rest
+- Feature pipeline: drop z + body-normalize + temporal smooth (input 99-dim)
+- GestureTransformer (Sol 2), Val Macro F1 = 0.5544
+- Model at `models/gesture_transformer/best_model.pt`
+
+### Phase 6 Status
+- `src/body/hand_tracker.py` — MediaPipe HandLandmarker + rule-based state classification
+- 8 hand states: Open Palm, Pointing, Steepling, Crossed Arms, Hands in Pockets, Behind Back, Clasped, Other
+- Uses both hand landmarks (21 pts) and pose keypoints (33 pts) for context
+- `tests/modality2/test_hand_tracker.py` — 16/16 tests passing
+- Model at `models/hand_landmarker.task` (7.5MB, pretrained)
