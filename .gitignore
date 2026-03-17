@@ -19,8 +19,6 @@ models/disfluency/best_model.pt
 
 # Pretrained model binaries (download at runtime)
 models/pose_landmarker_lite.task
-models/posture_mlp/best_model.pt
-models/gesture_transformer/best_model.pt
 yolov8n.pt
 
 # Pipeline output frames (regenerated from video)
