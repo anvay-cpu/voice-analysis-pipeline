@@ -378,7 +378,7 @@ Format as JSON array with keys: title, description, frequency"""
 
         try:
             from src.utils.claude_api_wrapper import call_claude
-            call_claude("Reply with OK", max_tokens=10, timeout=10)
+            call_claude("Reply with OK", max_tokens=10, timeout=5)
             self._api_available = True
         except Exception:
             self._api_available = False

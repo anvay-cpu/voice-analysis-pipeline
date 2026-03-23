@@ -10,6 +10,15 @@ function getBackendUrl(): string {
   return LOCAL_API;
 }
 
+/** Headers needed for ngrok free tier (skips browser warning interstitial) */
+function ngrokHeaders(): Record<string, string> {
+  const url = getBackendUrl();
+  if (url.includes("ngrok")) {
+    return { "ngrok-skip-browser-warning": "true" };
+  }
+  return {};
+}
+
 export function setBackendUrl(url: string) {
   if (typeof window !== "undefined") {
     if (url) {
@@ -36,6 +45,7 @@ export async function checkBackendHealth(): Promise<{
   const start = Date.now();
   try {
     const res = await fetch(`${url}/api/health`, {
+      headers: ngrokHeaders(),
       signal: AbortSignal.timeout(5000),
     });
     if (res.ok) {
@@ -59,6 +69,7 @@ export async function uploadVideo(
 
   const res = await fetch(`${getBackendUrl()}/api/upload`, {
     method: "POST",
+    headers: ngrokHeaders(),
     body: formData,
   });
 
@@ -71,19 +82,25 @@ export async function uploadVideo(
 }
 
 export async function getJobStatus(jobId: string): Promise<JobStatus> {
-  const res = await fetch(`${getBackendUrl()}/api/jobs/${jobId}`);
+  const res = await fetch(`${getBackendUrl()}/api/jobs/${jobId}`, {
+    headers: ngrokHeaders(),
+  });
   if (!res.ok) throw new Error("Failed to get job status");
   return res.json();
 }
 
 export async function getReport(sessionId: string): Promise<SpeechReport> {
-  const res = await fetch(`${getBackendUrl()}/api/reports/${sessionId}`);
+  const res = await fetch(`${getBackendUrl()}/api/reports/${sessionId}`, {
+    headers: ngrokHeaders(),
+  });
   if (!res.ok) throw new Error(`Report '${sessionId}' not found`);
   return res.json();
 }
 
 export async function getSessions(): Promise<SessionEntry[]> {
-  const res = await fetch(`${getBackendUrl()}/api/sessions`);
+  const res = await fetch(`${getBackendUrl()}/api/sessions`, {
+    headers: ngrokHeaders(),
+  });
   if (!res.ok) throw new Error("Failed to load sessions");
   const data = await res.json();
   return data.sessions;
@@ -92,6 +109,7 @@ export async function getSessions(): Promise<SessionEntry[]> {
 export async function deleteSession(sessionId: string): Promise<void> {
   const res = await fetch(`${getBackendUrl()}/api/sessions/${sessionId}`, {
     method: "DELETE",
+    headers: ngrokHeaders(),
   });
   if (!res.ok) throw new Error("Failed to delete session");
 }

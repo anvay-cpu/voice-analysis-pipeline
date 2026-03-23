@@ -63,11 +63,18 @@ class ChartGenerator:
             Dict mapping chart name to file path.
         """
         paths = {}
-        paths["radar"] = self.radar_chart(scores)
-        paths["heatmap"] = self.timeline_heatmap(timeline)
-        paths["emotion_arc"] = self.emotion_arc(timeline, fusion_output)
-        paths["regime_flow"] = self.regime_flow(fusion_output)
-        paths["filler_map"] = self.filler_map(timeline)
+        for name, fn in [
+            ("radar", lambda: self.radar_chart(scores)),
+            ("heatmap", lambda: self.timeline_heatmap(timeline)),
+            ("emotion_arc", lambda: self.emotion_arc(timeline, fusion_output)),
+            ("regime_flow", lambda: self.regime_flow(fusion_output)),
+            ("filler_map", lambda: self.filler_map(timeline)),
+        ]:
+            try:
+                paths[name] = fn()
+            except Exception as e:
+                logger.warning("Chart '%s' failed: %s", name, e)
+                paths[name] = None
 
         logger.info("Generated %d charts in %s", len(paths), self.output_dir)
         return paths

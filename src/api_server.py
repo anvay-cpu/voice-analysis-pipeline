@@ -223,8 +223,13 @@ def _run_pipeline(job_id: str, session_id: str, video_path: str, title: str):
         logger.info("Pipeline complete for %s in %.0fs", session_id, processing_time)
 
     except Exception as e:
-        logger.error("Pipeline failed for %s: %s", session_id, traceback.format_exc())
-        _update_job(job_id, status="failed", error=str(e))
+        tb = traceback.format_exc()
+        logger.error("Pipeline failed for %s: %s", session_id, tb)
+        # Include last step info in error for easier debugging
+        with _jobs_lock:
+            current_step = _jobs.get(job_id, {}).get("step", "unknown")
+        error_msg = f"[{current_step}] {type(e).__name__}: {e}"
+        _update_job(job_id, status="failed", error=error_msg)
 
         # Update session index
         sessions = _load_session_index()
