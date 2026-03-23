@@ -79,6 +79,28 @@ def _update_job(job_id: str, **kwargs):
             _jobs[job_id].update(kwargs)
 
 
+# Global pre-loaded pipeline (set by Colab Cell 5 or on first use)
+_pipeline_instance: "SpeechCoachPipeline | None" = None
+_pipeline_lock = threading.Lock()
+
+
+def get_pipeline():
+    """Get or create the shared pipeline instance."""
+    global _pipeline_instance
+    with _pipeline_lock:
+        if _pipeline_instance is None:
+            from src.master_pipeline import SpeechCoachPipeline
+            _pipeline_instance = SpeechCoachPipeline()
+        return _pipeline_instance
+
+
+def set_pipeline(pipeline):
+    """Set a pre-loaded pipeline instance (called from Colab notebook)."""
+    global _pipeline_instance
+    with _pipeline_lock:
+        _pipeline_instance = pipeline
+
+
 def _run_pipeline(job_id: str, session_id: str, video_path: str, title: str):
     """Run the full pipeline in a background thread."""
     session_dir = _get_session_dir(session_id)
@@ -90,11 +112,9 @@ def _run_pipeline(job_id: str, session_id: str, video_path: str, title: str):
 
         start = time.time()
 
-        # Import pipeline components
-        from src.master_pipeline import SpeechCoachPipeline
         from src.report_transformer import transform_pipeline_output
 
-        pipeline = SpeechCoachPipeline()
+        pipeline = get_pipeline()
 
         # Step 1: Voice
         _update_job(job_id, step="VOICE_ANALYSIS", step_index=1, progress=8.0)

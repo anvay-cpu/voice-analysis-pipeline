@@ -226,8 +226,9 @@ class SpeechCoachPipeline:
                 from src.pipeline import VoiceAnalysisPipeline
                 self._voice_pipeline = VoiceAnalysisPipeline()
             return self._voice_pipeline.process(video_path)
-        except ImportError:
-            logger.warning("Voice pipeline not available, using empty output")
+        except Exception as e:
+            logger.warning("Voice pipeline not available (%s: %s), using empty output",
+                          type(e).__name__, e)
             return {"windows": [], "summary": {}, "metadata": {"duration_sec": 0}}
 
     def _run_body_pipeline(self, video_path: str) -> dict:
@@ -237,8 +238,9 @@ class SpeechCoachPipeline:
                 from src.body.pipeline import BodyAnalysisPipeline
                 self._body_pipeline = BodyAnalysisPipeline()
             return self._body_pipeline.process(video_path)
-        except ImportError:
-            logger.warning("Body pipeline not available, using empty output")
+        except Exception as e:
+            logger.warning("Body pipeline not available (%s: %s), using empty output",
+                          type(e).__name__, e)
             return {"segments": [], "summary": {}}
 
     def _run_content_pipeline(self, voice_output: dict) -> dict:
@@ -249,8 +251,9 @@ class SpeechCoachPipeline:
                 self._content_pipeline = ContentAnalysisPipeline()
             transcript = voice_output.get("transcript", voice_output)
             return self._content_pipeline.process(transcript)
-        except ImportError:
-            logger.warning("Content pipeline not available, using empty output")
+        except Exception as e:
+            logger.warning("Content pipeline not available (%s: %s), using empty output",
+                          type(e).__name__, e)
             return {"segments": [], "summary": {}}
 
     # ── Helpers ────────────────────────────────────────────────────
