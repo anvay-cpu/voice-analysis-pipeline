@@ -1,0 +1,242 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════ */
+/*  COACH_OS DESIGN SYSTEM — B612 Mono                        */
+/* ═══════════════════════════════════════════════════════════ */
+
+:root {
+  --font: 'B612 Mono', monospace;
+
+  /* Surface hierarchy */
+  --s0: #000000;
+  --s1: #0e0e0e;
+  --s2: #131313;
+  --s3: #1b1b1b;
+  --s4: #1f1f1f;
+  --s5: #2a2a2a;
+  --s6: #353535;
+
+  /* Brand */
+  --amber: #FFB000;
+  --amber-dark: #FF8C00;
+  --amber-glow: 0 0 2px rgba(255, 176, 0, 0.4);
+
+  /* Outline */
+  --outline: #9f8e78;
+  --outline-variant: #524533;
+
+  /* Text */
+  --on-surface: #e2e2e2;
+  --text-dim: #888888;
+
+  /* Status */
+  --green: #4ade80;
+  --red: #ffb4ab;
+  --red-dark: #9c1209;
+  --secondary-container: #fd8b00;
+
+  /* Blue accents */
+  --blue-nav: #002244;
+  --blue-active-bg: rgba(30, 58, 138, 0.4);
+  --blue-active-text: #60a5fa;
+  --blue-300: #93c5fd;
+}
+
+@theme inline {
+  --color-background: var(--s0);
+  --color-foreground: var(--amber);
+  --font-mono: var(--font);
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/*  GLOBAL RESET                                               */
+/* ═══════════════════════════════════════════════════════════ */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 0 !important;
+  outline: none;
+  font-family: var(--font);
+  font-variant-ligatures: none;
+  transition: none !important;
+  animation: none !important;
+}
+
+html, body {
+  background: var(--s0);
+  color: var(--on-surface);
+  font-family: var(--font);
+  font-size: 13px;
+  line-height: 1.4;
+  overflow: hidden;
+  cursor: default;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/*  MATERIAL SYMBOLS                                           */
+/* ═══════════════════════════════════════════════════════════ */
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/*  SCROLLBARS                                                 */
+/* ═══════════════════════════════════════════════════════════ */
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #353535; }
+* { scrollbar-width: thin; scrollbar-color: #353535 #000; }
+
+/* ═══════════════════════════════════════════════════════════ */
+/*  BEVEL EFFECTS                                              */
+/* ═══════════════════════════════════════════════════════════ */
+
+.bevel-raised {
+  border-top: 1px solid rgba(159, 142, 120, 0.3) !important;
+  border-bottom: 1px solid #000000 !important;
+}
+
+.bevel-recessed {
+  border-top: 1px solid #000000 !important;
+  border-bottom: 1px solid #524533 !important;
+  background-color: #0e0e0e;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/*  AMBER GLOW                                                 */
+/* ═══════════════════════════════════════════════════════════ */
+
+.amber-glow {
+  text-shadow: 0 0 2px rgba(255, 176, 0, 0.4) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/*  SEGMENTED BAR                                              */
+/* ═══════════════════════════════════════════════════════════ */
+
+.segmented-bar-fill {
+  background: linear-gradient(to bottom, #ffba43, #ffb000);
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/*  SECTION HEADERS                                            */
+/* ═══════════════════════════════════════════════════════════ */
+
+.section-hdr {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--on-surface);
+  background: #001a33;
+  border-left: 2px solid var(--secondary-container);
+  padding: 3px 8px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/*  TABLE HEADERS                                              */
+/* ═══════════════════════════════════════════════════════════ */
+
+.table-hdr {
+  background: var(--s5);
+  border-bottom: 1px solid var(--outline-variant);
+  color: var(--amber-dark);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 8px;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/*  TACTILE BUTTONS                                            */
+/* ═══════════════════════════════════════════════════════════ */
+
+.tactile-button {
+  background: linear-gradient(to bottom, #353535, #131313);
+  border-top: 1px solid rgba(159, 142, 120, 0.4);
+  border-bottom: 1px solid #000000;
+}
+.tactile-button:active {
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid rgba(159, 142, 120, 0.4);
+  transform: translateY(1px);
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/*  EVENT / ROW HOVER                                          */
+/* ═══════════════════════════════════════════════════════════ */
+
+.event-item:hover {
+  background: var(--s5) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/*  HEATMAP CELLS                                              */
+/* ═══════════════════════════════════════════════════════════ */
+
+.heatmap-good { color: #22c55e; }
+.heatmap-ok { color: var(--amber); }
+.heatmap-poor { color: var(--amber-dark); }
+.heatmap-critical { color: #7f1d1d; }
+
+/* ═══════════════════════════════════════════════════════════ */
+/*  SELECTION / LINKS / INPUTS                                 */
+/* ═══════════════════════════════════════════════════════════ */
+
+::selection { background: var(--blue-active-bg); color: white; }
+a { color: var(--amber); text-decoration: none; }
+
+input, select, textarea {
+  background: var(--s1);
+  color: var(--amber);
+  border: 1px solid var(--outline-variant);
+  font-family: var(--font);
+  font-size: 13px;
+  padding: 4px 8px;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--amber);
+  outline: none;
+  box-shadow: none !important;
+  ring: none;
+}
+
+/* ═══════════════════════════════════════════════════════════ */
+/*  NO-SCROLLBAR                                               */
+/* ═══════════════════════════════════════════════════════════ */
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ═══════════════════════════════════════════════════════════ */
+/*  PRINT                                                      */
+/* ═══════════════════════════════════════════════════════════ */
+
+@media print {
+  body { background: white !important; color: black !important; }
+  .no-print { display: none !important; }
+}

@@ -50,3 +50,12 @@ logs/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Webapp build artifacts
+webapp/node_modules/
+webapp/.next/
+
+# Runtime data (uploaded videos, session state, generated reports)
+data/uploads/
+data/sessions/
+reports/

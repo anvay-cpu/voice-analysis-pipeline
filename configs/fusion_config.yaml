@@ -1,0 +1,55 @@
+# Fusion & Report Generation Configuration
+# Phase 4 (Multimodal Fusion) + Phase 5 (Scoring + Reports)
+
+timeline:
+  resolution_sec: 1        # 1-second grid resolution
+  voice_window_sec: 2.0    # Voice modality window size
+  voice_hop_sec: 1.0       # Voice modality hop size
+  body_window_sec: 6.0     # Body modality window size
+  body_hop_sec: 3.0        # Body modality hop size
+
+fusion:
+  # Regime transition scoring
+  transition_context_sec: 5    # Seconds of context around transitions
+  min_transition_gap_sec: 3    # Minimum seconds between transitions
+
+  # Recovery analysis
+  recovery_window_sec: 10     # Window for detecting recovery patterns
+
+  # Emotion coherence
+  coherence_window_sec: 5     # Window for cross-modal emotion comparison
+
+api:
+  base_url: "http://localhost:8080"
+  api_key: "not-needed"
+  model: "claude-sonnet-4-20250514"
+  max_retries: 3
+  timeout_sec: 30
+
+scoring:
+  # 6 dimensions with weights
+  dimensions:
+    delivery:
+      weight: 0.20
+      sources: [voice_prosody, voice_emotion]
+    body_language:
+      weight: 0.15
+      sources: [body_posture, body_gesture, body_gaze]
+    content_quality:
+      weight: 0.20
+      sources: [content_grammar, content_readability, content_argument]
+    engagement:
+      weight: 0.15
+      sources: [body_gaze, voice_emotion, content_tone]
+    structure:
+      weight: 0.15
+      sources: [content_regime, content_transitions]
+    confidence:
+      weight: 0.15
+      sources: [voice_fillers, voice_disfluency, body_posture, body_gesture]
+
+report:
+  output_dir: "data/reports"
+  template_dir: "src/report/templates"
+  chart_dpi: 150
+  include_pdf: true

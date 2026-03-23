@@ -1,0 +1,72 @@
+content_pipeline:
+  name: "content_analysis_v1"
+  version: "1.0.0"
+  device: "mps"
+
+transcript:
+  source: "modality1"
+  min_words_per_segment: 10
+  sentence_splitter: "spacy"
+
+grammar:
+  engine: "languagetool"
+  language: "en-US"
+  ignore_categories:
+    - "COMMA_PARENTHESIS_WHITESPACE"
+    - "WHITESPACE_RULE"
+    - "UPPERCASE_SENTENCE_START"
+    - "MORFOLOGIK_RULE_EN_US"
+  severity_weights:
+    critical: 1.0
+    major: 0.7
+    minor: 0.3
+
+readability:
+  target_audience: "general"
+  metrics:
+    - flesch_kincaid_grade
+    - dale_chall
+    - gunning_fog
+    - coleman_liau
+
+vocabulary:
+  awl_path: "data/resources/academic_word_list.txt"
+  min_ttr_window: 100
+
+regime:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  fine_tuned_path: "models/regime_detector/best_model.pt"
+  half_window: 5
+  min_prominence: 0.15
+  min_segment_sentences: 3
+  types:
+    - Introduction
+    - Main Argument
+    - Anecdote
+    - Data Presentation
+    - Counterargument
+    - Call to Action
+    - Q&A
+    - Conclusion
+    - Transition
+
+sentiment:
+  model_name: "cardiffnlp/twitter-roberta-base-sentiment-latest"
+
+tone:
+  model_path: "models/tone_classifier/best_model.pt"
+  classes:
+    - Assertive
+    - Persuasive
+    - Informative
+    - Inspirational
+    - Cautionary
+    - Humorous
+
+argument:
+  engine: "claude_cli"
+  model: "claude-sonnet-4-20250514"
+  wrapper: "src/utils/claude_api_wrapper.py"
+
+output:
+  output_dir: "data/outputs"

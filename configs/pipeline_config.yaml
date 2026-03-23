@@ -2,7 +2,7 @@
 pipeline:
   name: "voice_analysis_v1"
   version: "1.0.0"
-  device: "mps"  # "mps" for M1, "cuda" for Colab, "cpu" for fallback
+  device: "auto"  # "auto" picks cuda > mps > cpu; or set "mps", "cuda", "cpu" explicitly
 
 audio:
   sample_rate: 16000

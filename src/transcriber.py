@@ -7,7 +7,7 @@ from transformers import pipeline as hf_pipeline
 _whisper_pipe = None
 
 
-def load_whisper(model_id: str = "openai/whisper-small", device: str = "mps"):
+def load_whisper(model_id: str = "openai/whisper-small", device: str = "auto"):
     """Load Whisper model as a HuggingFace pipeline (cached after first call).
 
     Args:
@@ -22,8 +22,17 @@ def load_whisper(model_id: str = "openai/whisper-small", device: str = "mps"):
     if _whisper_pipe is not None:
         return _whisper_pipe
 
-    # MPS doesn't handle float16 well — use float32
-    torch_dtype = torch.float32
+    # Auto-detect device
+    if device == "auto":
+        if torch.cuda.is_available():
+            device = "cuda"
+        elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+            device = "mps"
+        else:
+            device = "cpu"
+
+    # CUDA can use float16 for speed; MPS/CPU need float32
+    torch_dtype = torch.float16 if device == "cuda" else torch.float32
 
     pipe = hf_pipeline(
         "automatic-speech-recognition",

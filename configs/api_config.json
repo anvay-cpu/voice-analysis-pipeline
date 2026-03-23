@@ -1,0 +1,9 @@
+{
+  "approach": "cli",
+  "method": "claude_cli_pipe",
+  "model": "claude-sonnet-4-20250514",
+  "wrapper": "src/utils/claude_api_wrapper.py",
+  "base_url": null,
+  "api_key": null,
+  "note": "Uses claude -p pipe mode with Max subscription. No proxy needed."
+}

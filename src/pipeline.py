@@ -39,7 +39,9 @@ class VoiceAnalysisPipeline:
 
     def __init__(self, config_path: str = "configs/pipeline_config.yaml"):
         self.config = load_config(config_path)
-        self.device = self.config.get("pipeline", {}).get("device", "cpu")
+        self.device = self._resolve_device(
+            self.config.get("pipeline", {}).get("device", "cpu")
+        )
         self.sr = self.config.get("audio", {}).get("sample_rate", 16000)
         self.timings = {}
         self._models_loaded = False
@@ -55,6 +57,18 @@ class VoiceAnalysisPipeline:
 
         # Timing history for ETA estimation (step_name → list of durations)
         self._step_history = {}
+
+    @staticmethod
+    def _resolve_device(device: str) -> str:
+        """Resolve device string, with 'auto' picking best available."""
+        if device == "auto":
+            import torch
+            if torch.cuda.is_available():
+                return "cuda"
+            elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+                return "mps"
+            return "cpu"
+        return device
 
     def _timer(self, name: str):
         """Context-manager-like timer. Call start/stop manually."""
@@ -432,6 +446,7 @@ class VoiceAnalysisPipeline:
             "metadata": metadata,
             "summary": summary,
             "windows": windows,
+            "transcript": transcript,
             "output_path": saved_path,
         }
 
