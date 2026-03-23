@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import type { SpeechReport, ViewType, TopNavMode } from "@/lib/types";
-import { getReport } from "@/lib/api";
+import { getReport, enrichReport } from "@/lib/api";
 import NavPanel from "./NavPanel";
 import FunctionKeyBar from "./FunctionKeyBar";
 import DashboardView from "./DashboardView";
@@ -76,6 +76,10 @@ export default function BloombergChrome({ report: initialReport }: Props) {
       setReport(newReport);
       setActiveTopNav("ANALYSIS");
       setActiveView("dashboard");
+      // Enrich coaching in background via local claude -p (Max subscription)
+      enrichReport(newReport).then((enriched) => {
+        if (enriched !== newReport) setReport(enriched);
+      });
     } catch {
       setActiveTopNav("HISTORY");
     }
@@ -86,6 +90,10 @@ export default function BloombergChrome({ report: initialReport }: Props) {
       setReport(r);
       setActiveTopNav("ANALYSIS");
       setActiveView("dashboard");
+      // Enrich coaching in background via local claude -p
+      enrichReport(r).then((enriched) => {
+        if (enriched !== r) setReport(enriched);
+      });
     }).catch(() => {});
   }
 

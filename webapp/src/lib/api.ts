@@ -97,6 +97,22 @@ export async function getReport(sessionId: string): Promise<SpeechReport> {
   return res.json();
 }
 
+export async function enrichReport(report: SpeechReport): Promise<SpeechReport> {
+  /** Enrich a report with detailed Claude coaching (runs locally via claude -p). */
+  if ((report as Record<string, unknown>)._enriched) return report;
+  try {
+    const res = await fetch("/api/enrich", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(report),
+    });
+    if (!res.ok) throw new Error("Enrichment failed");
+    return res.json();
+  } catch {
+    return report; // Fall back to template coaching
+  }
+}
+
 export async function getSessions(): Promise<SessionEntry[]> {
   const res = await fetch(`${getBackendUrl()}/api/sessions`, {
     headers: ngrokHeaders(),
