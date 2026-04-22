@@ -3,14 +3,35 @@
 import { useRef, useState, useEffect } from "react";
 import type { SpeechReport } from "@/lib/types";
 import { scoreColor, formatDuration, regimeColor } from "@/lib/utils";
+import { getStoredBackendUrl } from "@/lib/api";
 
 export default function VideoView({ report }: { report: SpeechReport }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [currentTime, setCurrentTime] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(report.duration_sec);
+  const [videoBlobUrl, setVideoBlobUrl] = useState<string | null>(null);
 
   const { disruption_events, coaching_feedback, regime_segments, scores } = report;
+
+  // Fetch video as blob to bypass ngrok interstitial
+  useEffect(() => {
+    if (!report.video_url) return;
+    const backendUrl = getStoredBackendUrl() || "http://localhost:8000";
+    const fullUrl = `${backendUrl}${report.video_url}`;
+    const headers: Record<string, string> = {};
+    if (backendUrl.includes("ngrok")) {
+      headers["ngrok-skip-browser-warning"] = "true";
+    }
+    fetch(fullUrl, { headers })
+      .then((res) => res.blob())
+      .then((blob) => setVideoBlobUrl(URL.createObjectURL(blob)))
+      .catch(() => setVideoBlobUrl(null));
+    return () => {
+      if (videoBlobUrl) URL.revokeObjectURL(videoBlobUrl);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [report.video_url]);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -107,10 +128,10 @@ export default function VideoView({ report }: { report: SpeechReport }) {
         }}
       >
         <div className="aspect-video" style={{ position: "relative", overflow: "hidden" }}>
-          {report.video_url ? (
+          {videoBlobUrl ? (
             <video
               ref={videoRef}
-              src={report.video_url}
+              src={videoBlobUrl}
               style={{ width: "100%", height: "100%", objectFit: "contain", background: "#000" }}
             />
           ) : (
