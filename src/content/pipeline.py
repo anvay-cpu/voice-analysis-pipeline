@@ -143,35 +143,48 @@ class ContentAnalysisPipeline:
         grammar_score = {"score": 100, "total_errors": 0}
         grammar_mod = self._modules.get("grammar")
         if grammar_mod and not skip_heavy:
-            logger.info("Step 2: Checking grammar...")
-            # Clean text for grammar checking
-            cleaned_sentences = []
-            for s in transcript["sentences"]:
-                cleaned = tp.clean_for_grammar(s["text"])
-                cleaned_sentences.append({**s, "text": cleaned})
-            grammar_errors = grammar_mod.check_transcript(cleaned_sentences)
-            grammar_score = grammar_mod.score_grammar(grammar_errors, transcript["total_words"])
-            logger.info(f"  Grammar score: {grammar_score['score']}")
+            try:
+                logger.info("Step 2: Checking grammar...")
+                cleaned_sentences = []
+                for s in transcript["sentences"]:
+                    cleaned = tp.clean_for_grammar(s["text"])
+                    cleaned_sentences.append({**s, "text": cleaned})
+                grammar_errors = grammar_mod.check_transcript(cleaned_sentences)
+                grammar_score = grammar_mod.score_grammar(grammar_errors, transcript["total_words"])
+                logger.info(f"  Grammar score: {grammar_score['score']}")
+            except Exception as e:
+                logger.warning(f"Step 2: Grammar check failed: {e}")
         else:
             logger.info("Step 2: Grammar check skipped")
 
         # Step 3: Readability
         logger.info("Step 3: Computing readability...")
-        readability = self._modules["readability"].score_transcript(transcript)
-        logger.info(f"  FKGL: {readability['overall'].get('flesch_kincaid_grade', 'N/A')}")
+        try:
+            readability = self._modules["readability"].score_transcript(transcript)
+            logger.info(f"  FKGL: {readability['overall'].get('flesch_kincaid_grade', 'N/A')}")
+        except Exception as e:
+            logger.warning(f"Step 3: Readability failed: {e}")
+            readability = {"overall": {}, "segments": []}
 
         # Step 4: Vocabulary
         logger.info("Step 4: Analyzing vocabulary...")
-        vocabulary = self._modules["vocabulary"].analyze_transcript(transcript)
-        logger.info(f"  TTR: {vocabulary['overall'].get('ttr', 'N/A')}")
+        try:
+            vocabulary = self._modules["vocabulary"].analyze_transcript(transcript)
+            logger.info(f"  TTR: {vocabulary['overall'].get('ttr', 'N/A')}")
+        except Exception as e:
+            logger.warning(f"Step 4: Vocabulary failed: {e}")
+            vocabulary = {"overall": {}, "segments": []}
 
         # Step 5: Regime detection — produces the PRIMARY segmentation
         regimes = []
         regime_mod = self._modules.get("regime")
         if regime_mod and not skip_heavy:
-            logger.info("Step 5: Detecting regimes...")
-            regimes = regime_mod.detect_and_label(transcript)
-            logger.info(f"  Found {len(regimes)} regimes")
+            try:
+                logger.info("Step 5: Detecting regimes...")
+                regimes = regime_mod.detect_and_label(transcript)
+                logger.info(f"  Found {len(regimes)} regimes")
+            except Exception as e:
+                logger.warning(f"Step 5: Regime detection failed: {e}")
         else:
             logger.info("Step 5: Regime detection skipped")
 
@@ -199,9 +212,12 @@ class ContentAnalysisPipeline:
         sentiment = {"overall": {}, "segments": []}
         sentiment_mod = self._modules.get("sentiment")
         if sentiment_mod and not skip_heavy:
-            logger.info("Step 6: Analyzing sentiment...")
-            sentiment = sentiment_mod.analyze_transcript(analysis_transcript)
-            logger.info(f"  Overall: {sentiment['overall'].get('polarity', 'N/A')}")
+            try:
+                logger.info("Step 6: Analyzing sentiment...")
+                sentiment = sentiment_mod.analyze_transcript(analysis_transcript)
+                logger.info(f"  Overall: {sentiment['overall'].get('polarity', 'N/A')}")
+            except Exception as e:
+                logger.warning(f"Step 6: Sentiment analysis failed: {e}")
         else:
             logger.info("Step 6: Sentiment analysis skipped")
 
@@ -209,9 +225,12 @@ class ContentAnalysisPipeline:
         tone = {"dominant_tone": "Unknown", "segments": []}
         tone_mod = self._modules.get("tone")
         if tone_mod and not skip_heavy:
-            logger.info("Step 7: Classifying tone...")
-            tone = tone_mod.classify_transcript(analysis_transcript)
-            logger.info(f"  Dominant tone: {tone.get('dominant_tone', 'N/A')}")
+            try:
+                logger.info("Step 7: Classifying tone...")
+                tone = tone_mod.classify_transcript(analysis_transcript)
+                logger.info(f"  Dominant tone: {tone.get('dominant_tone', 'N/A')}")
+            except Exception as e:
+                logger.warning(f"Step 7: Tone classification failed: {e}")
         else:
             logger.info("Step 7: Tone classification skipped")
 
@@ -219,11 +238,14 @@ class ContentAnalysisPipeline:
         argument_results = []
         arg_mod = self._modules.get("argument")
         if arg_mod and not skip_heavy and regimes:
-            logger.info("Step 8: Analyzing arguments...")
-            regime_types = [r.regime_type if hasattr(r, "regime_type") else r.get("regime_type", "Unknown")
-                           for r in regimes]
-            argument_results = arg_mod.analyze_full_speech(regime_segments, regime_types)
-            logger.info(f"  Analyzed {len(argument_results)} segments")
+            try:
+                logger.info("Step 8: Analyzing arguments...")
+                regime_types = [r.regime_type if hasattr(r, "regime_type") else r.get("regime_type", "Unknown")
+                               for r in regimes]
+                argument_results = arg_mod.analyze_full_speech(regime_segments, regime_types)
+                logger.info(f"  Analyzed {len(argument_results)} segments")
+            except Exception as e:
+                logger.warning(f"Step 8: Argument analysis failed: {e}")
         else:
             logger.info("Step 8: Argument analysis skipped")
 

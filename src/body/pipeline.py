@@ -142,94 +142,121 @@ class BodyAnalysisPipeline:
         frame_info = None
         frame_paths = []
         if "frame_extractor" in self._modules:
-            logger.info("[1/9] Extracting frames...")
-            frame_info = self._modules["frame_extractor"](
-                video_path,
-                output_dir=f"data/frames/{video_stem}",
-                target_fps=self.target_fps,
-            )
-            frame_paths = frame_info["frame_paths"]
-            logger.info("  → %d frames at %d fps", len(frame_paths), self.target_fps)
-        else:
-            logger.error("No frame extractor — cannot proceed")
-            return {"error": "frame_extractor not available"}
+            try:
+                logger.info("[1/9] Extracting frames...")
+                frame_info = self._modules["frame_extractor"](
+                    video_path,
+                    output_dir=f"data/frames/{video_stem}",
+                    target_fps=self.target_fps,
+                )
+                frame_paths = frame_info.get("frame_paths", [])
+                logger.info("  → %d frames at %d fps", len(frame_paths), self.target_fps)
+            except Exception as e:
+                logger.error("[1/9] Frame extraction failed: %s", e)
+
+        if not frame_paths:
+            logger.error("No frames extracted — cannot proceed with body analysis")
+            return {"segments": [], "summary": {}}
 
         n_frames = len(frame_paths)
 
         # Step 2: Person detection
         tracking = None
         if "person_detector" in self._modules:
-            logger.info("[2/9] Detecting speaker...")
-            tracking = self._modules["person_detector"].track_speaker(frame_paths)
-            detected = sum(1 for t in tracking if t["detected"])
-            logger.info("  → Speaker detected in %d/%d frames", detected, n_frames)
+            try:
+                logger.info("[2/9] Detecting speaker...")
+                tracking = self._modules["person_detector"].track_speaker(frame_paths)
+                detected = sum(1 for t in tracking if t["detected"])
+                logger.info("  → Speaker detected in %d/%d frames", detected, n_frames)
+            except Exception as e:
+                logger.warning("[2/9] Person detection failed: %s", e)
 
         # Step 3: Pose estimation
         poses = None
         if "pose_estimator" in self._modules:
-            logger.info("[3/9] Estimating poses...")
-            poses = self._modules["pose_estimator"].estimate_batch(frame_paths, tracking)
-            detected = sum(1 for v in poses.values() if v is not None)
-            logger.info("  → Pose in %d/%d frames", detected, n_frames)
+            try:
+                logger.info("[3/9] Estimating poses...")
+                poses = self._modules["pose_estimator"].estimate_batch(frame_paths, tracking)
+                detected = sum(1 for v in poses.values() if v is not None)
+                logger.info("  → Pose in %d/%d frames", detected, n_frames)
+            except Exception as e:
+                logger.warning("[3/9] Pose estimation failed: %s", e)
 
         # Step 4: Posture scoring (needs poses)
         posture_scores = None
         if "posture_scorer" in self._modules and poses is not None:
-            logger.info("[4/9] Scoring posture...")
-            posture_scores = self._modules["posture_scorer"].score_batch(poses)
-            scored = sum(1 for v in posture_scores.values() if v is not None)
-            logger.info("  → Posture scored for %d frames", scored)
+            try:
+                logger.info("[4/9] Scoring posture...")
+                posture_scores = self._modules["posture_scorer"].score_batch(poses)
+                scored = sum(1 for v in posture_scores.values() if v is not None)
+                logger.info("  → Posture scored for %d frames", scored)
+            except Exception as e:
+                logger.warning("[4/9] Posture scoring failed: %s", e)
 
         # Step 5: Gesture classification (needs poses)
         gesture_results = None
         if "gesture_classifier" in self._modules and poses is not None:
-            logger.info("[5/9] Classifying gestures...")
-            gesture_results = self._modules["gesture_classifier"].classify_video(
-                poses, fps=self.target_fps
-            )
-            logger.info("  → %d gesture windows", len(gesture_results))
+            try:
+                logger.info("[5/9] Classifying gestures...")
+                gesture_results = self._modules["gesture_classifier"].classify_video(
+                    poses, fps=self.target_fps
+                )
+                logger.info("  → %d gesture windows", len(gesture_results))
+            except Exception as e:
+                logger.warning("[5/9] Gesture classification failed: %s", e)
 
         # Step 6: Hand tracking (needs frames, optionally poses)
         hand_results = None
         if "hand_tracker" in self._modules:
-            logger.info("[6/9] Tracking hands...")
-            hand_results = self._modules["hand_tracker"].track_video(
-                frame_paths, poses=poses
-            )
-            logger.info("  → %d hand states", len(hand_results))
+            try:
+                logger.info("[6/9] Tracking hands...")
+                hand_results = self._modules["hand_tracker"].track_video(
+                    frame_paths, poses=poses
+                )
+                logger.info("  → %d hand states", len(hand_results))
+            except Exception as e:
+                logger.warning("[6/9] Hand tracking failed: %s", e)
 
         # Step 7: Gaze estimation (needs frames)
         gaze_result = None
         if "gaze_estimator" in self._modules:
-            logger.info("[7/9] Estimating gaze...")
-            gaze_result = self._modules["gaze_estimator"].track_video(frame_paths)
-            logger.info(
-                "  → Engagement: %.2f, detected %d/%d",
-                gaze_result["engagement_ratio"],
-                gaze_result["detected_frames"],
-                gaze_result["total_frames"],
-            )
+            try:
+                logger.info("[7/9] Estimating gaze...")
+                gaze_result = self._modules["gaze_estimator"].track_video(frame_paths)
+                logger.info(
+                    "  → Engagement: %.2f, detected %d/%d",
+                    gaze_result["engagement_ratio"],
+                    gaze_result["detected_frames"],
+                    gaze_result["total_frames"],
+                )
+            except Exception as e:
+                logger.warning("[7/9] Gaze estimation failed: %s", e)
 
         # Step 8: Facial emotion (needs frames)
         emotion_results = None
         if "facial_emotion" in self._modules:
-            logger.info("[8/9] Classifying facial emotions...")
-            # Pass face bboxes from gaze if available
-            emotion_results = self._modules["facial_emotion"].track_video(frame_paths)
-            logger.info("  → %d emotion classifications", len(emotion_results))
+            try:
+                logger.info("[8/9] Classifying facial emotions...")
+                emotion_results = self._modules["facial_emotion"].track_video(frame_paths)
+                logger.info("  → %d emotion classifications", len(emotion_results))
+            except Exception as e:
+                logger.warning("[8/9] Facial emotion failed: %s", e)
 
         # Step 9: Stage movement (needs poses)
         movement_result = None
         if "stage_movement" in self._modules and poses is not None:
-            logger.info("[9/9] Analyzing stage movement...")
-            movement_result = self._modules["stage_movement"].analyze(
-                poses, fps=self.target_fps
-            )
-            logger.info(
-                "  → Pattern: %s, score: %.1f",
-                movement_result["movement_pattern"],
-                movement_result["stage_usage_score"],
-            )
+            try:
+                logger.info("[9/9] Analyzing stage movement...")
+                movement_result = self._modules["stage_movement"].analyze(
+                    poses, fps=self.target_fps
+                )
+                logger.info(
+                    "  → Pattern: %s, score: %.1f",
+                    movement_result["movement_pattern"],
+                    movement_result["stage_usage_score"],
+                )
+            except Exception as e:
+                logger.warning("[9/9] Stage movement failed: %s", e)
 
         # Assemble output
         if "output_assembler" in self._modules:

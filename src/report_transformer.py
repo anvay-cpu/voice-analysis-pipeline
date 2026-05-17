@@ -111,8 +111,8 @@ def _transform_fusion_stats(fusion_output: dict) -> dict:
         "regime_boundaries": len(fusion_output.get("regime_boundaries", [])),
         "total_disruptions": recovery.get("total_disruptions", 0),
         "mean_composure": recovery.get("mean_composure", 0),
-        "emotion_coherence": coherence.get("coherence_score_0_100", 0) / 100.0
-        if coherence.get("coherence_score_0_100")
+        "emotion_coherence": (coherence.get("coherence_score_0_100") or 0) / 100.0
+        if coherence.get("coherence_score_0_100") is not None
         else coherence.get("mean_coherence", 0),
     }
 
