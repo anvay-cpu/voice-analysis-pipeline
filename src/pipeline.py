@@ -92,7 +92,7 @@ class VoiceAnalysisPipeline:
         """Load filler verification MLP. Skips if model not found."""
         if self._filler_verifier is not None:
             return
-        filler_model_path = Path("models/filler/best_model.pt")
+        filler_model_path = Path("models/filler_verifier/best_model.pt")
         if not filler_model_path.exists():
             print("  [SKIP] Filler verifier model not found — using regex-only")
             return
