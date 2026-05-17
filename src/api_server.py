@@ -277,6 +277,30 @@ async def upload_video(
 
     file_size = file_path.stat().st_size
 
+    # Re-encode to H.264 if needed (AV1, HEVC etc. not supported by OpenCV)
+    if ext in {".mp4", ".webm", ".avi", ".mov", ".mkv"}:
+        try:
+            import subprocess as _sp
+            probe = _sp.run(
+                ["ffprobe", "-v", "error", "-select_streams", "v:0",
+                 "-show_entries", "stream=codec_name", "-of", "csv=p=0", str(file_path)],
+                capture_output=True, text=True, timeout=10,
+            )
+            codec = probe.stdout.strip().lower()
+            if codec and codec not in ("h264", ""):
+                logger.info("Re-encoding %s video from %s to H.264", safe_name, codec)
+                fixed = str(file_path) + ".tmp.mp4"
+                _sp.run(
+                    ["ffmpeg", "-y", "-i", str(file_path), "-c:v", "libx264", "-c:a", "aac", fixed],
+                    capture_output=True, timeout=600,
+                )
+                if os.path.exists(fixed) and os.path.getsize(fixed) > 0:
+                    os.replace(fixed, str(file_path))
+                    file_size = file_path.stat().st_size
+                    logger.info("Re-encoded to H.264: %.1fMB", file_size / 1e6)
+        except Exception as e:
+            logger.warning("Video re-encoding check failed: %s (proceeding with original)", e)
+
     # Create session entry
     sessions = _load_session_index()
     sessions.insert(0, {
