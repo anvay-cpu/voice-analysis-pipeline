@@ -19,9 +19,9 @@ logger = logging.getLogger(__name__)
 DEFAULT_MODEL = "claude-sonnet-4-20250514"
 DEFAULT_TIMEOUT = 120
 
-_PROXY_URL = os.environ.get("CLAUDE_PROXY_URL", "").rstrip("/")
-if _PROXY_URL:
-    logger.info(f"Claude proxy configured: {_PROXY_URL}")
+def _get_proxy_url() -> str:
+    """Get proxy URL at call time (not import time) so env changes are picked up."""
+    return os.environ.get("CLAUDE_PROXY_URL", "").rstrip("/")
 
 
 def _call_proxy(
@@ -33,9 +33,10 @@ def _call_proxy(
 ) -> str:
     """Call Claude via the HTTP proxy server."""
     import requests
+    proxy_url = _get_proxy_url()
 
     resp = requests.post(
-        f"{_PROXY_URL}/v1/claude",
+        f"{proxy_url}/v1/claude",
         json={
             "prompt": prompt,
             "system": system,
@@ -90,7 +91,8 @@ def call_claude(
     Returns:
         The text response from Claude.
     """
-    if _PROXY_URL:
+    proxy_url = _get_proxy_url()
+    if proxy_url:
         return _call_proxy(prompt, system, model, max_tokens, timeout)
 
     try:
@@ -114,7 +116,7 @@ def call_claude_json(
 
 
 if __name__ == "__main__":
-    print(f"Proxy URL: {_PROXY_URL or '(not set — using CLI)'}")
+    print(f"Proxy URL: {_get_proxy_url() or '(not set — using CLI)'}")
     print("Testing Claude wrapper...")
     response = call_claude("Reply with exactly: WRAPPER_TEST_OK")
     print(f"Response: {response}")
