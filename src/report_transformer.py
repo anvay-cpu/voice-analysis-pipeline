@@ -215,11 +215,13 @@ def _transform_fillers(voice_output: dict) -> list:
     fillers = []
     for w in windows:
         for f in w.get("fillers", []):
-            t = f.get("time_sec", w.get("start_sec", 0))
+            t = f.get("start", f.get("time_sec", w.get("start_sec", 0)))
             fillers.append({
                 "time_sec": t,
                 "timestamp": _format_timestamp(t),
                 "word": f.get("word", "um"),
+                "confidence": f.get("confidence", 0.0),
+                "category": f.get("category", ""),
                 "context": f.get("context", ""),
             })
     return fillers
