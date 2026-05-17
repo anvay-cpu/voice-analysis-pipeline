@@ -155,7 +155,7 @@ class VocalEmotionClassifier:
 
         # Load trained emotion head
         self.head = EmotionHead(input_dim=192, num_classes=len(self.classes))
-        checkpoint = torch.load(model_path, map_location=self.device, weights_only=True)
+        checkpoint = torch.load(model_path, map_location=self.device, weights_only=False)
         self.head.load_state_dict(checkpoint["head_state_dict"])
         self.head.to(self.device)
         self.head.eval()

@@ -198,7 +198,7 @@ class PostureScorer:
 
         if model_path and Path(model_path).exists():
             self.mlp = PostureMLP()
-            state = torch.load(model_path, map_location=device, weights_only=True)
+            state = torch.load(model_path, map_location=device, weights_only=False)
             self.mlp.load_state_dict(state)
             self.mlp.to(device)
             self.mlp.eval()

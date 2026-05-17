@@ -65,7 +65,7 @@ def load_filler_verifier(model_path: str, device: str = "cpu") -> FillerVerifier
         Model in eval mode.
     """
     model = FillerVerifierMLP()
-    checkpoint = torch.load(model_path, map_location=device, weights_only=True)
+    checkpoint = torch.load(model_path, map_location=device, weights_only=False)
     model.load_state_dict(checkpoint["model_state_dict"])
     model.to(device)
     model.eval()

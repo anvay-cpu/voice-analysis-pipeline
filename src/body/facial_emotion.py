@@ -82,7 +82,7 @@ class FacialEmotionClassifier:
 
     def _load_model(self, model_path: str):
         """Load trained model from checkpoint."""
-        ckpt = torch.load(model_path, map_location=self.device, weights_only=True)
+        ckpt = torch.load(model_path, map_location=self.device, weights_only=False)
 
         num_classes = ckpt.get("num_classes", NUM_CLASSES)
         self.classes = ckpt.get("classes", list(EMOTION_CLASSES))

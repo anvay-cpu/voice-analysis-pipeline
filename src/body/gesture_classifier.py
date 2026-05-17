@@ -172,7 +172,7 @@ class GestureClassifier:
 
     def _load_model(self, model_path: str):
         """Load trained model (auto-detects architecture from checkpoint)."""
-        ckpt = torch.load(model_path, map_location=self.device, weights_only=True)
+        ckpt = torch.load(model_path, map_location=self.device, weights_only=False)
 
         model_name = ckpt.get("model_name", "GestureTransformer")
         self.input_dim = ckpt.get("input_dim", 99)

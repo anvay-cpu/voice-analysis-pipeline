@@ -96,9 +96,12 @@ class VoiceAnalysisPipeline:
         if not filler_model_path.exists():
             print("  [SKIP] Filler verifier model not found — using regex-only")
             return
-        from src.filler_verifier import load_filler_verifier
-        self._filler_verifier = load_filler_verifier(
-            str(filler_model_path), device=self.device)
+        try:
+            from src.filler_verifier import load_filler_verifier
+            self._filler_verifier = load_filler_verifier(
+                str(filler_model_path), device=self.device)
+        except Exception as e:
+            print(f"  [SKIP] Filler verifier failed to load: {e} — using regex-only")
 
     def _load_disfluency(self):
         """Load disfluency model. Skips if model not found."""
@@ -109,9 +112,12 @@ class VoiceAnalysisPipeline:
         if not Path(model_path).exists():
             print("  [SKIP] Disfluency model not found — skipping disfluency detection")
             return
-        from src.disfluency_model import load_disfluency_model
-        self._disfluency_model, self._disfluency_processor = load_disfluency_model(
-            model_path, device=self.device)
+        try:
+            from src.disfluency_model import load_disfluency_model
+            self._disfluency_model, self._disfluency_processor = load_disfluency_model(
+                model_path, device=self.device)
+        except Exception as e:
+            print(f"  [SKIP] Disfluency model failed to load: {e}")
 
     def _load_emotion(self):
         """Load vocal emotion classifier. Skips if model not found."""
@@ -122,8 +128,11 @@ class VoiceAnalysisPipeline:
         if not Path(model_path).exists():
             print("  [SKIP] Emotion model not found — skipping emotion classification")
             return
-        from src.vocal_emotion import load_emotion_model
-        self._emotion_classifier = load_emotion_model(model_path, device=self.device)
+        try:
+            from src.vocal_emotion import load_emotion_model
+            self._emotion_classifier = load_emotion_model(model_path, device=self.device)
+        except Exception as e:
+            print(f"  [SKIP] Emotion model failed to load: {e}")
 
     def load_all_models(self):
         """Load all models upfront with progress tracking.
