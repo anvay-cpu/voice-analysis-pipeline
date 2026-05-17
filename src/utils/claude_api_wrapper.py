@@ -37,6 +37,7 @@ def _call_proxy(
 
     resp = requests.post(
         f"{proxy_url}/v1/claude",
+        headers={"ngrok-skip-browser-warning": "true"},
         json={
             "prompt": prompt,
             "system": system,
