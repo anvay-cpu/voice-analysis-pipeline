@@ -107,10 +107,34 @@ def _run_pipeline(job_id: str, session_id: str, video_path: str, title: str):
     session_dir.mkdir(parents=True, exist_ok=True)
 
     try:
-        _update_job(job_id, status="running", step="VOICE_ANALYSIS",
-                     step_index=1, total_steps=8, progress=5.0)
+        _update_job(job_id, status="running", step="PREPROCESSING",
+                     step_index=0, total_steps=8, progress=2.0)
 
         start = time.time()
+
+        # Re-encode to H.264 if needed (AV1, HEVC etc. not supported by OpenCV)
+        ext = os.path.splitext(video_path)[1].lower()
+        if ext in {".mp4", ".webm", ".avi", ".mov", ".mkv"}:
+            try:
+                import subprocess as _sp
+                probe = _sp.run(
+                    ["ffprobe", "-v", "error", "-select_streams", "v:0",
+                     "-show_entries", "stream=codec_name", "-of", "csv=p=0", video_path],
+                    capture_output=True, text=True, timeout=10,
+                )
+                codec = probe.stdout.strip().lower()
+                if codec and codec not in ("h264", ""):
+                    logger.info("Re-encoding video from %s to H.264", codec)
+                    fixed = video_path + ".tmp.mp4"
+                    _sp.run(
+                        ["ffmpeg", "-y", "-i", video_path, "-c:v", "libx264", "-c:a", "aac", fixed],
+                        capture_output=True, timeout=600,
+                    )
+                    if os.path.exists(fixed) and os.path.getsize(fixed) > 0:
+                        os.replace(fixed, video_path)
+                        logger.info("Re-encoded to H.264: %.1fMB", os.path.getsize(video_path) / 1e6)
+            except Exception as e:
+                logger.warning("Re-encoding failed: %s (proceeding with original)", e)
 
         from src.report_transformer import transform_pipeline_output
 
@@ -276,30 +300,6 @@ async def upload_video(
         shutil.copyfileobj(file.file, f)
 
     file_size = file_path.stat().st_size
-
-    # Re-encode to H.264 if needed (AV1, HEVC etc. not supported by OpenCV)
-    if ext in {".mp4", ".webm", ".avi", ".mov", ".mkv"}:
-        try:
-            import subprocess as _sp
-            probe = _sp.run(
-                ["ffprobe", "-v", "error", "-select_streams", "v:0",
-                 "-show_entries", "stream=codec_name", "-of", "csv=p=0", str(file_path)],
-                capture_output=True, text=True, timeout=10,
-            )
-            codec = probe.stdout.strip().lower()
-            if codec and codec not in ("h264", ""):
-                logger.info("Re-encoding %s video from %s to H.264", safe_name, codec)
-                fixed = str(file_path) + ".tmp.mp4"
-                _sp.run(
-                    ["ffmpeg", "-y", "-i", str(file_path), "-c:v", "libx264", "-c:a", "aac", fixed],
-                    capture_output=True, timeout=600,
-                )
-                if os.path.exists(fixed) and os.path.getsize(fixed) > 0:
-                    os.replace(fixed, str(file_path))
-                    file_size = file_path.stat().st_size
-                    logger.info("Re-encoded to H.264: %.1fMB", file_size / 1e6)
-        except Exception as e:
-            logger.warning("Video re-encoding check failed: %s (proceeding with original)", e)
 
     # Create session entry
     sessions = _load_session_index()
